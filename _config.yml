@@ -7,7 +7,7 @@ description: "每天进步一点点."
 keyword: "大数据分析,曦妤的博客,菜鸟每天都要学习"
 url: "http://TereseSong.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/TereseSong/TereseSong.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
