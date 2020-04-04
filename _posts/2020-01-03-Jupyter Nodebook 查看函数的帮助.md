@@ -2,13 +2,14 @@
 layout:     post
 title:      Jupyter Notebook 查看函数的帮助
 subtitle:   一个Jupyter Notebook使用小技巧
-date:       2020-04-02
+date:       2020-01-03
 author:     terese
 header-img: img/post-bg-practise-1.jpg
 catalog: 	 true
 tags:
-   - 项目实践笔记
-
+   - 实践总结
+private: true
+---
 
 # Jupyter Notebook 查看函数的帮助
 
