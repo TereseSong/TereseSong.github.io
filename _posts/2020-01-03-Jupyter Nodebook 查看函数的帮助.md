@@ -8,7 +8,6 @@ header-img: img/post-bg-practise-1.jpg
 catalog: 	 true
 tags:
    - 实践总结
-private: true
 ---
 
 # Jupyter Notebook 查看函数的帮助

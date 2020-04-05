@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      解决使用Jekyll+GitHub Page博客构建错误
+title:      解决使用Jekyll和GitHub Page博客构建错误
 subtitle:   Unable to build page. Please try again later.
 date:       2020-04-05 
 author:     terese
 header-img: img/post-12.jpg
 catalog:   true
 tags:
-    - 实践笔记
+    - 博客
 ---
 
 使用Jekyll+GitHub Page搭建博客遇到出现404页面或者pull代码后博客却没有更新这种情况，先查看邮箱是否出现错误提示：
