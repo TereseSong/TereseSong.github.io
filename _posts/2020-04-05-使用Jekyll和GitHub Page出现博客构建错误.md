@@ -2,7 +2,7 @@
 layout:     post
 title:      解决使用Jekyll和GitHub Page博客构建错误
 subtitle:   Unable to build page. Please try again later.
-date:       2020-04-04
+date:       2020-04-05
 author:     terese
 header-img: img/post-12.jpg
 catalog:   true
