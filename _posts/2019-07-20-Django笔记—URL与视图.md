@@ -4,7 +4,7 @@ title:      Django笔记
 subtitle:   Django笔记-URL与视图
 date:       2019-07-20 22:20:00
 author:     terese
-header-img: img/post-13.jpg
+header-img: img/post-16.jpg
 catalog:   true
 tags:
     - Django
