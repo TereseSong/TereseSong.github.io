@@ -64,24 +64,24 @@ def get_article(article_url):
         print('No such element!')
 
 if __name__ == '__main__':
-    #在简书抓取bdex链接，这里只以爬取一个页面为例子
+    #在简书抓取bdex链接，这里只以爬取一个页面为例子  
     browser = webdriver.Chrome()
     article_url = 'https://www.jianshu.com/p/f0c3812b32f8'
     get_article(article_url)
     browser.close()
 
-    #实现全自动一次性下载BiliDrive 备份文件
+    #实现全自动一次性下载BiliDrive 备份文件    
     capture_file  = open('./抓取页面内容.txt')
     str1 = capture_file.read()
     info = re.findall(r'(bdex://\S+.*?)',str1)
     print(info)
     for i in info:
-        # 命令行下载
-        os.system('bdex download '+i) #执行成功 返回 0
+        # 命令行下载    
+        os.system('bdex download '+i) #执行成功 返回 0  
         # 输出重定向：在控制台的输出重定向到 txt文本文件中
-        output = sys.stdout
-        outputfile = open('./命令行执行返回结果.txt', 'w')
-        sys.stdout = outputfile
+        output = sys.stdout   
+        outputfile = open('./命令行执行返回结果.txt', 'w')  
+        sys.stdout = outputfile  
 ```
 
 output：
