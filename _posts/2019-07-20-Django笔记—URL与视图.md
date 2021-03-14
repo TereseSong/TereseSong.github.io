@@ -8,6 +8,7 @@ header-img: img/post-16.jpg
 catalog:   true
 tags:
     - Django
+    - 笔记
 ---
 
 1. Django 基本命令``python manage.py runserver``

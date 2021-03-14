@@ -7,7 +7,7 @@ author:     terese
 header-img: img/post-12.jpg
 catalog:   true
 tags:
-    - 博客
+    - 问题解决
 ---
 
 使用Jekyll+GitHub Page搭建博客遇到出现404页面或者pull代码后博客却没有更新这种情况，先查看邮箱是否出现错误提示：

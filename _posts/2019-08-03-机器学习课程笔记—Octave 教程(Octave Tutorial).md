@@ -7,8 +7,7 @@ author:     terese
 header-img: img/post-11.jpg
 catalog:   true
 tags:
-    - 课程笔记
-    - 机器学习
+    - 笔记
 ---
 
 1. 基本操作
