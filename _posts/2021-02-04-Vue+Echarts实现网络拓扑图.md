@@ -13,11 +13,11 @@ typora-copy-images-to: upload
 
 #### Vue+Echarts实现动态网络拓扑图
 
-![image-20210309211334067](https://ww1.sinaimg.cn/large/bcf01ac7gy1gojdzhl7acj20z50b0q5f.jpg)
+![image-20210309211334067](https://i.loli.net/2021/03/16/mMqxOzAcyK6kaeg.jpg)
 
 点击可出现各个主机信息详情，这里使用的是虚拟数据；
 
-![image-20210314111922703](https://ww1.sinaimg.cn/large/bcf01ac7gy1gojduf23ydj20my0ewdip.jpg)
+![image-20210314111922703](https://i.loli.net/2021/03/16/RWqsQu8XDJtFapA.jpg)
 
 点击单个主机可以获取主机的信息
 
