@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>利用python可视化分析优衣库销售数据分析报告 - Terese&#039;s Blog</title><link rel="manifest" href="/tereseBlog/manifest.json"><meta name="application-name" content="Terese&#039;s Blog"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Terese&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="优衣库是经营休闲、运动服装设计、制造和零售的日本公司，由柳井正创立。定位为“快时尚”的优衣库。目前为全球知名服装品牌之一，除了日本之外目前在全球十七个地区展开业务。线上线下融合营销，反常规O2O模式深得用户心。"><meta property="og:type" content="blog"><meta property="og:title" content="利用python可视化分析优衣库销售数据分析报告"><meta property="og:url" content="https://teresesong.github.io/tereseBlog/2020/03/21/2020-03-21-python%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E4%BC%98%E8%A1%A3%E5%BA%93%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/"><meta property="og:site_name" content="Terese&#039;s Blog"><meta property="og:description" content="优衣库是经营休闲、运动服装设计、制造和零售的日本公司，由柳井正创立。定位为“快时尚”的优衣库。目前为全球知名服装品牌之一，除了日本之外目前在全球十七个地区展开业务。线上线下融合营销，反常规O2O模式深得用户心。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://teresesong.github.io/tereseBlog/img/post-14.jpg"><meta property="article:published_time" content="2020-03-21T14:49:00.000Z"><meta property="article:modified_time" content="2022-10-05T10:27:43.104Z"><meta property="article:author" content="terese"><meta property="article:tag" content="实践"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://teresesong.github.io/tereseBlog/img/post-14.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://teresesong.github.io/tereseBlog/2020/03/21/2020-03-21-python%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E4%BC%98%E8%A1%A3%E5%BA%93%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/"},"headline":"利用python可视化分析优衣库销售数据分析报告","image":["https://teresesong.github.io/tereseBlog/img/post-14.jpg"],"datePublished":"2020-03-21T14:49:00.000Z","dateModified":"2022-10-05T10:27:43.104Z","author":{"@type":"Person","name":"terese"},"publisher":{"@type":"Organization","name":"Terese's Blog","logo":{"@type":"ImageObject","url":{"text":"Terese's site"}}},"description":"优衣库是经营休闲、运动服装设计、制造和零售的日本公司，由柳井正创立。定位为“快时尚”的优衣库。目前为全球知名服装品牌之一，除了日本之外目前在全球十七个地区展开业务。线上线下融合营销，反常规O2O模式深得用户心。"}</script><link rel="canonical" href="https://teresesong.github.io/tereseBlog/2020/03/21/2020-03-21-python%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E4%BC%98%E8%A1%A3%E5%BA%93%E9%94%80%E5%94%AE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/"><link rel="icon" href="/tereseBlog/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/tereseBlog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/tereseBlog/">Terese&#039;s site</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/tereseBlog/">Home</a><a class="navbar-item" href="/tereseBlog/archives">Archives</a><a class="navbar-item" href="/tereseBlog/categories">Categories</a><a class="navbar-item" href="/tereseBlog/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/tereseBlog/img/post-14.jpg" alt="利用python可视化分析优衣库销售数据分析报告"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-03-21T14:49:00.000Z" title="2020/3/21 22:49:00">2020-03-21</time>发表</span><span class="level-item"> terese </span><span class="level-item"><a class="link-muted" href="/tereseBlog/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="level-item">24 分钟读完 (大约3626个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">利用python可视化分析优衣库销售数据分析报告</h1><div class="content"><p>优衣库是经营休闲、运动服装设计、制造和零售的日本公司，由柳井正创立。定位为“快时尚”的优衣库。目前为全球知名服装品牌之一，除了日本之外目前在全球十七个地区展开业务。线上线下融合营销，反常规O2O模式深得用户心。</p>
+<span id="more"></span>
+<h3 id="分析总思路"><a href="#分析总思路" class="headerlink" title="分析总思路"></a>分析总思路</h3><h4 id="一、定义问题"><a href="#一、定义问题" class="headerlink" title="一、定义问题"></a>一、定义问题</h4><p>数据分析框架：5W2H<br>1.who：顾客群体分布？<br>2.when：整体销售情况随时间变化情况？什么时候销售量更多？<br>3.what：什么产品销售量最好？不同产品的销售情况？<br>4.where：顾客主要分布区域？<br>5.why：为什么存在这些情况？<br>6.how：顾客偏爱哪一种购物方式？<br>7.how many：挣了多少钱？利润是多少？<br>相关分析：  </p>
+<p>销售额和其他变量的关系<br>年龄和销售额的关系<br>销售额和产品成本之间的关系  </p>
+<h4 id="二、数据处理"><a href="#二、数据处理" class="headerlink" title="二、数据处理"></a>二、数据处理</h4><p>数据表清洗</p>
+<p>数据预处理</p>
+<p>数据分组</p>
+<h4 id="三、数据可视化及分析"><a href="#三、数据可视化及分析" class="headerlink" title="三、数据可视化及分析"></a>三、数据可视化及分析</h4><p><strong>1.who：顾客群体分布</strong></p>
+<p>客户年龄阶段分布</p>
+<p>客户性别比例</p>
+<p>探究性别和产品销量、销售金额的关系</p>
+<p><strong>2.when：整体销售情况随时间变化情况？什么时候销售量更多？</strong></p>
+<p>探究销售金额和购买时间的关系</p>
+<p>探究购买产品数量和购买时间的关系</p>
+<p>探究顾客人数和购买时间的关系</p>
+<p><strong>3.what：什么产品销售量最好？不同产品的销售情况？</strong></p>
+<p>对比分析不同产品的产品销量</p>
+<p>对比分析不同产品的销售总金额</p>
+<p><strong>4.where：产品销量和销售金额与地域的情况？</strong></p>
+<p>对比分析不同城市销售额的情况</p>
+<p>对比分析不同城市销售量情况</p>
+<p><strong>5.why：为什么存在这些情况？(即每个问题后的小结）</strong></p>
+<p><strong>6.how：顾客偏爱哪一种购物方式？</strong></p>
+<p>探究不同性别对线上线下购买方式的偏好</p>
+<p>探究不同年龄层对线上线下购买方式的偏好</p>
+<p>探究不同城市对线上线下购物方式的偏好（对比销售量）（对比销售额）</p>
+<p><strong>7.how many：挣了多少钱？利润是多少？</strong></p>
+<p>营收情况：销售总金额、订单总数、售出产品总数量、单笔订单平均销售金额、单个产品平均单价</p>
+<p>单个产品利润分布情况</p>
+<p>全部产品成本分布情况</p>
+<p>销售产品的利润分布情况：</p>
+<p>1.探究不同城市销售产品的利润情况</p>
+<p>2.探究线上线下销售渠道销售产品的利润情况</p>
+<p><strong>相关分析</strong></p>
+<p>探究销售额、利润、产品成本之间的相关性</p>
+<p>探究不同城市和门店中成本和销售额的相关性</p>
+<h4 id="四、总结和建议"><a href="#四、总结和建议" class="headerlink" title="四、总结和建议"></a>四、总结和建议</h4><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p><a target="_blank" rel="noopener" href="https://www.kesci.com/home/project/share/a02c0994adf49e65">python可视化分析优衣库销售数据.ipynb</a></p>
+<h3 id="数据分析报告："><a href="#数据分析报告：" class="headerlink" title="数据分析报告："></a>数据分析报告：</h3><p><strong>1.who：顾客群体分布？</strong></p>
+<p>客户年龄阶段分布：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj999jecgj30fd0e0q37.jpg" alt="image-20200405222254924"></p>
+<p>客户性别比例：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj99uut1mj306e06taa3.jpg" alt="image-20200405222331624"></p>
+<p>性别和产品销量、销售金额的关系：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9b4399ej3089025aa1.jpg" alt="image-20200405222444749"></p>
+<p>优衣库的顾客女性比例是64.1%，女性在产品销量、销售金额是男性的两倍。</p>
+<p><strong>2.when：整体销售情况随时间变化情况？什么时候销售量更多？</strong></p>
+<p>销售金额和购买时间的关系：</p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9bng3khj30fe0e40sx.jpg" alt="image-20200405222514172" style="zoom:67%;" />
+
+<p>购买产品数量和购买时间的关系：</p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9bx0xqsj30ew0eawep.jpg" alt="image-20200405222525122" style="zoom: 67%;" />
+
+<p>顾客人数和购买时间的关系：</p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9d4devlj30f00e4t8w.jpg" alt="image-20200405222639790" style="zoom:67%;" />
+
+<p>从图中可以看出，无论是销售量，销售金额还是顾客人数，周中的都是比周末要多，但考虑到一周七天中只有两天是周末，平均来看，周末的日均销售情况是更好的。这是正常的情况，周末是大众的休息时间，更有空购买衣服。</p>
+<p><strong>3.what：什么产品销售量最好？不同产品的销售情况？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">不同产品的产品销量、销售总金额情况，quant：购买的产品数量，revenue：销售金额  </span><br><span class="line">         quant     revenue  </span><br><span class="line">product                      </span><br><span class="line">T恤       18425  1538744.84  </span><br><span class="line">当季新品      5338   590664.88  </span><br><span class="line">毛衣        1356   245630.80  </span><br><span class="line">牛仔裤       2432   246127.48  </span><br><span class="line">短裤        2821   107485.88  </span><br><span class="line">袜子        3639   127731.36  </span><br><span class="line">裙子         995   137302.78  </span><br><span class="line">运动        1792   118060.34  </span><br><span class="line">配件        4622   444685.15  </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9dzj9baj30oy09g409.jpg" alt="image-20200405222730197"></p>
+<p>对比分析不同产品的产品销量：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9fh0xchj30g30e274l.jpg" alt="image-20200405222855722"></p>
+<p>对比分析不同产品的销售总金额：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9ftpi45j30fg0e2jrq.jpg?with" alt="image-20200405222915816"></p>
+<p>通过看各个商品种类的平均销售额和交易次数分布图，可以看出 T 袖占了主要份额。T恤，当季新品，配件无论在销售量和销售额上分别位列第一第二第三位，这之外的袜子、短裤虽然销量大于其他几种产品，但由于其单价比较低，在销售额中反而垫底。袜子、短裤应该是实行了薄利多销的策略。</p>
+<p><strong>4.where：产品销量和销售金额与地域的情况？</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">不同城市的产品销量、销售总金额情况，quant：购买的产品数量，revenue：销售金额  </span><br><span class="line">      quant    revenue  </span><br><span class="line">city                   </span><br><span class="line">上海     4605  389821.73    </span><br><span class="line">北京     1477  130458.62    </span><br><span class="line">南京     1265  123150.93    </span><br><span class="line">广州     3815  318124.49   </span><br><span class="line">成都     2524  208189.86  </span><br><span class="line">杭州     6975  589518.49  </span><br><span class="line">武汉     6701  589778.44  </span><br><span class="line">深圳     8502  733123.68  </span><br><span class="line">西安     2492  210774.62  </span><br><span class="line">重庆     3064  263492.65  </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9gxi3zrj30no0ababx.jpg" alt="image-20200405223018672"></p>
+<p>对比分析不同城市销售量情况：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9hnng98j30g10e774j.jpg" alt="image-20200405223101295"></p>
+<p>对比分析不同城市销售额的情况：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9hbklshj30f70e3q39.jpg" alt="image-20200405223042202"></p>
+<p>深圳、杭州、武汉的销售量和销售额都高于其他城市，分别是一、二、三名，看起来销售情况更好。这些城市的人群可能对优衣库认可度更高。</p>
+<p><strong>5.why：为什么存在这些情况？(即每个问题后的小结）</strong></p>
+<p><strong>6.how：顾客偏爱哪一种购物方式？</strong></p>
+<p>探究不同性别对线上线下购买方式的偏好（对比销售量）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9ix8ldlj30f60e8dg3.jpg" alt="image-20200405223214442"></p>
+<p>探究不同年龄层对线上线下购买方式的偏好（对比销售额）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9jimtdxj30f80e8mxf.jpg" alt="image-20200405223248633"></p>
+<p>购物方式有线上线下两种，我们从顾客的性别，年龄层，所在城市分析其购物偏好方式</p>
+<p>1.从性别的角度看，无论男性还是女性都偏爱线下的直接到门店购买，而其中女性的消费在金额和数量上都比男性多很多  </p>
+<p>2.从年龄的角度看，无论哪个年龄层都偏爱线下直接到门店购买，优衣库的线上和线下交易量都主要集中在 25-39 岁之间，他们的消费情况高于其他年龄层。这部分顾客的线上交易额都远高于线下。</p>
+<p>探究不同年龄层对线上线下购买方式的偏好（对比销售量）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9laui9uj30f00e474o.jpg" alt="image-20200405223431703"></p>
+<p>探究不同年龄层对线上线下购买方式的偏好（对比销售额）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9lnwzlrj30ey0e10t4.jpg" alt="image-20200405223452545"></p>
+<p>探究不同城市对线上线下购物方式的偏好（对比销售量）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9o1lxsgj30ev0eaq39.jpg" alt="image-20200405223710202"></p>
+<p>探究不同城市对线上线下购物方式的偏好（对比销售额）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9onmi14j30f60e9wev.jpg" alt="image-20200405223745078"></p>
+<p>可以看到没有深圳、杭州、成都、北京、南京的线上数据，可能是数据缺失，需要确认数据来源是否可靠。城市上，深圳、杭州的线下销售量和销售额都远高于其他城市。重庆、西安、上海线下交易远高于线上交易，猜测是这些城市门店较多，线下购物十分方便；武汉线上购买和线下购买二者几乎持平；广州很特别，更偏向网上下单然后门店自提的方式，线下的购物消费情况是线上的一半。大致得出结论，广州的顾客更偏爱线上购买优衣库的商品，武汉的顾客线上线下几乎没差别，而其他几个城市都更喜欢线下购物。</p>
+<p><strong>7.how many：挣了多少钱？利润是多少？</strong></p>
+<p>销售情况：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">销售总金额: 3556433.51  </span><br><span class="line">订单总数: 36827  </span><br><span class="line">售出产品总数量: 41420  </span><br><span class="line">单笔订单平均销售金额: 96.57136095799277  </span><br><span class="line">单个产品平均单价: 85.86271149203283  </span><br></pre></td></tr></table></figure>
+
+<p>通过计算得到，销售总金额约为36万，订单总数量为4万多，单笔订单平均销售金额为96.6元，单个产品平均单价为 85.9元</p>
+<p>全部产品成本统计分析：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">count    22292.00  </span><br><span class="line">mean        46.12  </span><br><span class="line">std         19.12   </span><br><span class="line">min          9.00  </span><br><span class="line">25%         49.00    </span><br><span class="line">50%         49.00  </span><br><span class="line">75%         49.00  </span><br><span class="line">max         99.00  </span><br></pre></td></tr></table></figure>
+
+<p>单个产品利润分布情况：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9pxfjhjj30ch07ywep.jpg" alt="image-20200405223858861"></p>
+<p>毛衣、配件和裙子的平均利润远高于其他商品，t 恤以较低的利润贡献了最大的销售额。 T 恤的销量最高，单件利润集中在 0-100 元之间，应该是优衣库利润的中坚力量。</p>
+<p>相关分析：</p>
+<p>销售额、利润、产品成本之间的关系？</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdj9qp6ei3j30ci07gglo.jpg" alt="image-20200405223942390"></p>
+<p>显然，产品成本和产品单价成强正相关；产品单价和利润成强相关性；销售额和利润的关系从热力图中可以看出来相关关系呈正相关，且相关性比较强，成本与销售额也是成正相关越高越高，销售额越高，但相关关系并不是非常强；而利润和成本之间的相关关系是最弱的。</p>
+<p>不同城市销售产品的平均利润情况：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdja1xfyk8j30bk0813yz.jpg" alt="image-20200405225030553"></p>
+<p>线上线下销售渠道销售产品的利润情况：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdja2bge0sj30bw082glq.jpg" alt="image-20200405225048620"></p>
+<p>探究不同城市和门店中成本和销售额的相关性：</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdja2m2cl5j30cr08aaaf.jpg" alt="image-20200405225106560"></p>
+<p>四、总结与建议</p>
+<p>​		利用python可视化可视化分析整体销售情况（包括产品销售数量、销售金额、顾客人数等）与时间（周中和周末）变化的关系，分析不同类别的产品的销售情况，得出配件销售数量最多，毛衣销售额最高的结论，提出适当增加配件库存量的建议。</p>
+<p>​		从用户角度分析，优衣库的顾客女性比例是64.1%，女性在产品销量、销售金额是男性的两倍。从年龄层看，优衣库的线上和线下交易量都主要集中在 25-39 岁之间，说明优衣库的购买主要人群25-39 岁的人群，这部分顾客的线上交易额都略高于线下；而 40 岁以上的顾客，线下交易数量远远大于线上。还能看到女性和男性都普遍喜欢线下交易，但线上交易的销售额都略高于线下。因此优衣库产品主要人群为25-39岁客户，多为女性。</p>
+<p>​		从购买时间看，无论是销售量，销售金额还是顾客人数，周末的日均销售情况更好。周末是大众休息的时间，所以日均销售情况更好。</p>
+<p>​		从不同地区来看，深圳、杭州、武汉的销售量和销售额都高于其他城市，分别是一、二、三名，看起来销售情况更好。这些城市的人群可能对优衣库认可度更高，也有可能是优衣库在这些城市业务更广，门店更多。</p>
+<p>​		从顾客购买方式偏好来看，线下交易数量远远大于线上，但整体消费金额不及线上。无论哪个年龄层都偏爱线下直接到门店购买。广州的顾客更偏爱线上购买优衣库的商品，武汉的顾客线上线下几乎没差别，而其他几个城市都更喜欢线下购物。据此提出提升线下门店购物体验，比如货物陈列以促进消费或简化线上购物流程等。</p>
+<p>​		从影响销售额因素相关分析来看，产品成本和产品单价、产品单价和利润、销售额和利润成强正相关。成本与销售额也是成正相关越高越高，销售额越高，但相关关系并不是非常强。利润和成本之间的相关关系是最弱的。</p>
+<p>​		从产品销售情况来看，销售总金额保留一位小数为35.6万，订单总数量为4.1万 ，单笔订单平均销售金额为96.6元，单个产品平均单价为 85.9元。分析产品销售，其中 T 袖占了主要份额。T恤，当季新品，配件无论在销售量和销售额上分别位列第一第二第三位，这之外的袜子、短裤虽然销量大于其他几种产品，但由于其单价比较低，在销售额中反而垫底。袜子、短裤可以实行了薄利多销的策略。通过分析发现亏损商品主要来源于牛仔裤和毛衣，T 恤为优衣库利润的中坚力量。</p>
+<p>​	</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>利用python可视化分析优衣库销售数据分析报告</p><p><a href="https://teresesong.github.io/tereseBlog/2020/03/21/2020-03-21-python可视化分析优衣库销售数据分析报告/">https://teresesong.github.io/tereseBlog/2020/03/21/2020-03-21-python可视化分析优衣库销售数据分析报告/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>terese</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-03-21</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-10-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/">实践</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/tereseBlog/" alt="支付宝"></span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/tereseBlog/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/tereseBlog/2020/03/22/2020-03-22-Hive%E5%B0%8F%E7%BB%83%E4%B9%A0%E5%AE%9E%E7%8E%B0%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Hive小练习实现单词统计</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/tereseBlog/2020/03/08/2020-03-08-MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="level-item">MySQL数据库基础知识点</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#分析总思路"><span class="level-left"><span class="level-item">1</span><span class="level-item">分析总思路</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#一、定义问题"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">一、定义问题</span></span></a></li><li><a class="level is-mobile" href="#二、数据处理"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">二、数据处理</span></span></a></li><li><a class="level is-mobile" href="#三、数据可视化及分析"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">三、数据可视化及分析</span></span></a></li><li><a class="level is-mobile" href="#四、总结和建议"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">四、总结和建议</span></span></a></li></ul></li><li><a class="level is-mobile" href="#代码实现"><span class="level-left"><span class="level-item">2</span><span class="level-item">代码实现</span></span></a></li><li><a class="level is-mobile" href="#数据分析报告："><span class="level-left"><span class="level-item">3</span><span class="level-item">数据分析报告：</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/tereseBlog/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/"><span class="tag">实践</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/"><span class="tag">实践总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="tag">问题解决</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/tereseBlog/">Terese&#039;s site</a><p class="is-size-7"><span>&copy; 2022 terese</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/tereseBlog/js/column.js"></script><script src="/tereseBlog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/tereseBlog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/tereseBlog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/tereseBlog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/tereseBlog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

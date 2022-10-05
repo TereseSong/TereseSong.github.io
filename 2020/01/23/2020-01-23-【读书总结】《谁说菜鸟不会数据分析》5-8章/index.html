@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>【读书总结】《谁说菜鸟不会数据分析》5-8章 - Terese&#039;s Blog</title><link rel="manifest" href="/tereseBlog/manifest.json"><meta name="application-name" content="Terese&#039;s Blog"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Terese&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="第五章 数据分析"><meta property="og:type" content="blog"><meta property="og:title" content="【读书总结】《谁说菜鸟不会数据分析》5-8章"><meta property="og:url" content="https://teresesong.github.io/tereseBlog/2020/01/23/2020-01-23-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B5-8%E7%AB%A0/"><meta property="og:site_name" content="Terese&#039;s Blog"><meta property="og:description" content="第五章 数据分析"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://teresesong.github.io/tereseBlog/img/post-6.jpg"><meta property="article:published_time" content="2020-01-23T01:14:41.000Z"><meta property="article:modified_time" content="2022-10-05T10:30:44.529Z"><meta property="article:author" content="terese"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://teresesong.github.io/tereseBlog/img/post-6.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://teresesong.github.io/tereseBlog/2020/01/23/2020-01-23-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B5-8%E7%AB%A0/"},"headline":"【读书总结】《谁说菜鸟不会数据分析》5-8章","image":["https://teresesong.github.io/tereseBlog/img/post-6.jpg"],"datePublished":"2020-01-23T01:14:41.000Z","dateModified":"2022-10-05T10:30:44.529Z","author":{"@type":"Person","name":"terese"},"publisher":{"@type":"Organization","name":"Terese's Blog","logo":{"@type":"ImageObject","url":{"text":"Terese's site"}}},"description":"第五章 数据分析"}</script><link rel="canonical" href="https://teresesong.github.io/tereseBlog/2020/01/23/2020-01-23-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B5-8%E7%AB%A0/"><link rel="icon" href="/tereseBlog/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/tereseBlog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/tereseBlog/">Terese&#039;s site</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/tereseBlog/">Home</a><a class="navbar-item" href="/tereseBlog/archives">Archives</a><a class="navbar-item" href="/tereseBlog/categories">Categories</a><a class="navbar-item" href="/tereseBlog/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-01-23T01:14:41.000Z" title="2020/1/23 09:14:41">2020-01-23</time>发表</span><span class="level-item"> terese </span><span class="level-item"><a class="link-muted" href="/tereseBlog/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="level-item">30 分钟读完 (大约4440个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">【读书总结】《谁说菜鸟不会数据分析》5-8章</h1><div class="content"><h1 id="第五章-数据分析"><a href="#第五章-数据分析" class="headerlink" title="第五章 数据分析"></a>第五章 数据分析</h1><span id="more"></span>
+<h2 id="1、数据分析方法"><a href="#1、数据分析方法" class="headerlink" title="1、数据分析方法"></a>1、数据分析方法</h2><p>数据分析作用与对应的分析方法</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223003533228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="a-常用数据分析方法-P101"><a href="#a-常用数据分析方法-P101" class="headerlink" title="a. 常用数据分析方法 P101"></a>a. 常用数据分析方法 P101</h3><p><img src="https://img-blog.csdnimg.cn/20200223003446280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>对比分析法</li>
+<li>分组分析法</li>
+<li>结构分析法</li>
+<li>平均分析法</li>
+<li>交叉分析法</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://https//cloud.tencent.com/developer/article/1506595">统计学 常用的数据分析方法大总结！</a></p>
+<h3 id="b-综合评价分析法"><a href="#b-综合评价分析法" class="headerlink" title="b. 综合评价分析法"></a>b. 综合评价分析法</h3><p><img src="https://img-blog.csdnimg.cn/20200223004122741.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200223004022559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-杜邦分析法"><a href="#c-杜邦分析法" class="headerlink" title="c. 杜邦分析法"></a>c. 杜邦分析法</h3><p><img src="https://img-blog.csdnimg.cn/20200223224534586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>eg：市场占有率的杜邦分析示例</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223224643991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-漏斗分析法"><a href="#d-漏斗分析法" class="headerlink" title="d. 漏斗分析法"></a>d. 漏斗分析法</h3><p><img src="https://img-blog.csdnimg.cn/20200223004941422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="e-矩阵关联分析法"><a href="#e-矩阵关联分析法" class="headerlink" title="e. 矩阵关联分析法"></a>e. 矩阵关联分析法</h3><p><img src="https://img-blog.csdnimg.cn/20200223005125464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="f-高级数据分析方法"><a href="#f-高级数据分析方法" class="headerlink" title="f. 高级数据分析方法"></a>f. 高级数据分析方法</h3><p>根据分析三大误区</p>
+<p>1、分析目的不明确，为分析而分析</p>
+<p>2、缺乏业务知识，分析结果偏离实际</p>
+<p>3、一味追求使用高级分析方法，热衷研究模型</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223004308100.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2、数据分析工具"><a href="#2、数据分析工具" class="headerlink" title="2、数据分析工具"></a>2、数据分析工具</h2><h3 id="a-数据透视表"><a href="#a-数据透视表" class="headerlink" title="a. 数据透视表"></a>a. 数据透视表</h3><p><img src="https://img-blog.csdnimg.cn/20200223005250475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-数据透视表技巧"><a href="#b-数据透视表技巧" class="headerlink" title="b. 数据透视表技巧"></a>b. 数据透视表技巧</h3><h3 id="c-多选题分析"><a href="#c-多选题分析" class="headerlink" title="c. 多选题分析"></a>c. 多选题分析</h3><h1 id="第六章-数据展现"><a href="#第六章-数据展现" class="headerlink" title="第六章 数据展现"></a>第六章 数据展现</h1><p>让老板在30秒种内读懂你的数据，这章的图表最好自己动手操作一遍。</p>
+<h2 id="1、揭开图表的真面目"><a href="#1、揭开图表的真面目" class="headerlink" title="1、揭开图表的真面目"></a>1、揭开图表的真面目</h2><h3 id="a-图表的作用"><a href="#a-图表的作用" class="headerlink" title="a. 图表的作用"></a>a. 图表的作用</h3><p>表达形象化；突出重点；体现专业化；</p>
+<h3 id="b-经济适用图表类型"><a href="#b-经济适用图表类型" class="headerlink" title="b. 经济适用图表类型"></a>b. 经济适用图表类型</h3><p><img src="https://img-blog.csdnimg.cn/20200223214036757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-通过关系选择图表"><a href="#c-通过关系选择图表" class="headerlink" title="c. 通过关系选择图表"></a>c. 通过关系选择图表</h3><p>通过数据间的关系选择图表，大部分数据间的关系可以归纳为以下六种类型：成分、排序、时间序列、频率分布、相关性、多重数据比较。</p>
+<p>常用图表类型与作用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223005649259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>成分</li>
+</ul>
+<p>成分也叫构成，用于表示整体的一部分，一般情况下用饼图表示。</p>
+<p>百分比堆积柱形图</p>
+<ul>
+<li>排序</li>
+</ul>
+<p>可排序的图有柱形图、条形图、气泡图、帕累托图等</p>
+<ul>
+<li>时间序列</li>
+</ul>
+<p>时间序列用于表示某事按一定的时间顺序发展的走势、趋势。</p>
+<p>折线图、柱形图。时间趋势首选折线图。没必要既做折线图又做柱形图。还有面积图也能表示。</p>
+<ul>
+<li>频率分布</li>
+</ul>
+<p>频率分布是特殊的排序类图形，它只能按指定的横轴排。比如某集团产品不同价格区间的销量，横轴只能按价格从低到高。</p>
+<p>用于表示频率分布的图表还有柱形图、条形图、折线图。</p>
+<ul>
+<li>相关性</li>
+</ul>
+<p>相关性用于衡量两大类中各个项目之间的关系，即观察其中一类项目大小随着另一类项目大小有规律的变化。</p>
+<p>用于衡量相关性的图还有柱形图、对称条形图（旋风图）、散点图、气泡图。</p>
+<ul>
+<li>多重数据比较</li>
+</ul>
+<p>数据类型多于两个的数据分析比较。可以选择雷达图，可以对比多个类别多种指标。</p>
+<p>eg：A、B、C三类在六个指标中的评分</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223224727206.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-图表制作五步法"><a href="#d-图表制作五步法" class="headerlink" title="d.图表制作五步法"></a>d.图表制作五步法</h3><p><img src="https://img-blog.csdnimg.cn/2020022321363410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2、图表也疯狂"><a href="#2、图表也疯狂" class="headerlink" title="2、图表也疯狂"></a>2、图表也疯狂</h2><h3 id="a-突出显示单元格"><a href="#a-突出显示单元格" class="headerlink" title="a.突出显示单元格"></a>a.突出显示单元格</h3><h3 id="b-项目选取"><a href="#b-项目选取" class="headerlink" title="b.项目选取"></a>b.项目选取</h3><p>与突出显示单元格不同的是，项目选取指定的规则指定值是对原始数据经过计算的数据。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223230255246.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-数据条"><a href="#c-数据条" class="headerlink" title="c.数据条"></a>c.数据条</h3><p><img src="https://img-blog.csdnimg.cn/20200223230300636.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-图标集"><a href="#d-图标集" class="headerlink" title="d.图标集"></a>d.图标集</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://img-blog.csdnimg.cn/20200223231002812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></h2><h3 id="e-迷你图"><a href="#e-迷你图" class="headerlink" title="e.迷你图"></a>e.迷你图</h3><p>插入迷你图</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022323171024.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3、给图表换装"><a href="#3、给图表换装" class="headerlink" title="3、给图表换装"></a>3、给图表换装</h2><p>平均线图、双坐标图、竖形折线图（蛇形图）、瀑布图、帕累托图、人口金字塔图、漏斗图、矩阵图（散点图）、发展矩阵图、改进难易矩阵（气泡图）</p>
+<h3 id="a-平均线图"><a href="#a-平均线图" class="headerlink" title="a.平均线图"></a>a.平均线图</h3><p>平均线图是对比分析的典型图例</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223232847177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-双坐标图"><a href="#b-双坐标图" class="headerlink" title="b.双坐标图"></a>b.双坐标图</h3><p>柱形图+折线图，折线图选中次坐标轴</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223233236801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>双柱图</p>
+<p>由于双柱图会导致柱子重合，可以插入销量占位和收入占位数值为0给出占位空间。</p>
+<p>需切换行列，设置收入和收入占位为次坐标轴，删除销售占位和收入占位的标签。<img src="https://img-blog.csdnimg.cn/20200223235542718.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-竖形折线图"><a href="#c-竖形折线图" class="headerlink" title="c.竖形折线图"></a>c.竖形折线图</h3><p>也称之为蛇形图。竖形折线图多在市场研究、咨询等公司用于展示产品功能，品牌形象的用户评价，可用于分析和比较多个不同的产品、项目在每个指标方面的表现，得出他们在每个指标属性偏向。</p>
+<h3 id="d-瀑布图"><a href="#d-瀑布图" class="headerlink" title="d.瀑布图"></a>d.瀑布图</h3><p>在企业的经营分析、财务分析使用较多，用于表示企业成本的构成、变化等情况。</p>
+<p>插入占位数，即差值，创建二维柱形图，设置占位数无填充颜色。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224002532502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="e-帕累托图"><a href="#e-帕累托图" class="headerlink" title="e.帕累托图"></a>e.帕累托图</h3><p>帕累托图：主要用于质量分析，原因定位等。帕累托图的原理是帕累托原则（也就是二八原则）</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ee66e6e2b21a">Excel图表神技：如何快速搞定一张高大上的帕累托图？</a></p>
+<p>先<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ee66e6e2b21a">SUM(B$2:B2)&#x2F;SUM($B$2:$B$9)</a>计算累计百分比，再用组合图，不显示右坐标轴标签，添加数据标签。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022400535419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="f-旋风图"><a href="#f-旋风图" class="headerlink" title="f.旋风图"></a>f.旋风图</h3><p><img src="https://img-blog.csdnimg.cn/2020022415492749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>分别建两个二维条形图，将A的横坐标轴设置“逆序刻度值”，再将纵坐标轴刻度线设置为无，调整B的位置就OK了。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224160011679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="g-人口金字塔图"><a href="#g-人口金字塔图" class="headerlink" title="g.人口金字塔图"></a>g.人口金字塔图</h3><p>专门用于反映人口的过去、现在、未来的发展情况。</p>
+<p>人口金字塔是按人口年龄和性别表示人口分布的特种塔状条形图，形象地表示某地区人口的年龄和性别构成分布状况。</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1fed61cdce24">只要5步制作人口金字塔图表</a></p>
+<h3 id="h-漏斗图"><a href="#h-漏斗图" class="headerlink" title="h.漏斗图"></a>h.漏斗图</h3><p>在Excel2016中插入漏斗图</p>
+<h3 id="i-矩阵图（散点图）"><a href="#i-矩阵图（散点图）" class="headerlink" title="i.矩阵图（散点图）"></a>i.矩阵图（散点图）</h3><h3 id="j-发展矩阵图"><a href="#j-发展矩阵图" class="headerlink" title="j.发展矩阵图"></a>j.发展矩阵图</h3><h3 id="k-改进难易矩阵（气泡图）"><a href="#k-改进难易矩阵（气泡图）" class="headerlink" title="k.改进难易矩阵（气泡图）"></a>k.改进难易矩阵（气泡图）</h3><h1 id="第七章-美化图表"><a href="#第七章-美化图表" class="headerlink" title="第七章 美化图表"></a>第七章 美化图表</h1><h2 id="1、别让图表犯错"><a href="#1、别让图表犯错" class="headerlink" title="1、别让图表犯错"></a>1、别让图表犯错</h2><h3 id="a-让图表“五脏俱全”"><a href="#a-让图表“五脏俱全”" class="headerlink" title="a.让图表“五脏俱全”"></a>a.让图表“五脏俱全”</h3><p>图表标题、单位、脚注、图例、资料来源。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200224165150844.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-要注意的条条框框"><a href="#b-要注意的条条框框" class="headerlink" title="b.要注意的条条框框"></a>b.要注意的条条框框</h3><ul>
+<li>避免无意义的图表</li>
+</ul>
+<p>看不出任何意义和结论的图，没必要加。</p>
+<ul>
+<li>不要把图表撑破</li>
+</ul>
+<p>最好一张图表反映一个观点。</p>
+<ul>
+<li>只选对的，不选复杂的</li>
+</ul>
+<p>简约且能表示意思就好。</p>
+<ul>
+<li>一句话标题</li>
+</ul>
+<p>将短语变为句子，通过标题能很快领悟图表的要点。标题有吸引力会给图表加分。</p>
+<ul>
+<li>饼图的七个注意事项</li>
+</ul>
+<p>尽量不要用3D效果，如果要用尽量薄一些；</p>
+<p>饼图的结构中，最多包含5种数据；</p>
+<p>不要使用爆炸式的“饼图分离”</p>
+<p>标注写在扇区内或者旁边，不要使用图例；</p>
+<p>边界线使用白色，突出边缘感；</p>
+<p>让数据从12点钟的位置开始排列，最重要的成分紧靠12点钟的位置；</p>
+<p>标题要反映图表主题</p>
+<ul>
+<li>复合图饼</li>
+</ul>
+<p>插入二维饼图。复合饼图可以将分类数据中所占比例较小的分类合并成“其他”项，使图表反映的数据更能突出重点。</p>
+<ul>
+<li>柱形图</li>
+</ul>
+<p>同一数据序列使用相同的颜色；</p>
+<p>不要使用倾斜的标签，别让读者歪着脑袋看</p>
+<p>纵坐标轴一般刻度从0开始</p>
+<ul>
+<li>条形图</li>
+</ul>
+<p>同一数据序列使用相同的颜色；</p>
+<p>尽量让数据从大到小排序，方便阅读；</p>
+<p>不要使用倾斜的标签；</p>
+<p>最好添加数据标签，有数据标签则网格线和横坐标轴是多余的；</p>
+<ul>
+<li>折线图</li>
+</ul>
+<p>拆线选用的线形要相对粗些，最好比网格线、坐标轴等要突出；</p>
+<p>线条一般不超过5条；</p>
+<p>纵坐标轴一般刻度从0开始；</p>
+<p>图中折线未添加数据标签，给读者读图带来不便；</p>
+<h3 id="c-图表会说谎"><a href="#c-图表会说谎" class="headerlink" title="c.图表会说谎"></a>c.图表会说谎</h3><ul>
+<li>虚张声势的增长 eg:纵坐标轴刻度不是从0开始</li>
+<li>3D效果的伪装</li>
+<li>逆序排序的误导</li>
+<li>一维图形的障眼法 eg:气泡的大小与数值不一样</li>
+</ul>
+<p>总结：</p>
+<p>饼图的顺序要得当<br>在折线图尽量避免用虚线<br>数据的罗列要尽可能的符合逻辑</p>
+<p>确保数据不会因为设计而丢失或者覆盖，比如在面积图使用透明效果</p>
+<p>图表应尽力避免耗费读者过多的精力</p>
+<p>添加辅助的图形元素来使数据更易于理解，比如在散点图中增加趋势线</p>
+<p>确保图表的呈现要符合实际情况<br>气泡的大小应该和数值一样</p>
+<p>在热图中尽力避免使用不同的颜色，可以使用单一颜色不同深浅<br>柱形图柱子之间的间距不宜过宽或者过窄，最好调整为宽的1&#x2F;2<br>数据的对比要直观的呈现差异<br>尽量避免使用三维图，2D为王道</p>
+<h2 id="2、图表美化"><a href="#2、图表美化" class="headerlink" title="2、图表美化"></a>2、图表美化</h2><h3 id="a-图表美化三原则"><a href="#a-图表美化三原则" class="headerlink" title="a.图表美化三原则"></a>a.图表美化三原则</h3><p>简约、整洁、对比（突出某些重要元素）</p>
+<h3 id="b-美化图表的技巧"><a href="#b-美化图表的技巧" class="headerlink" title="b.美化图表的技巧"></a>b.美化图表的技巧</h3><ul>
+<li>最大化数据墨水比</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200224175355563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>找出隐形的线</li>
+</ul>
+<p>在描绘图表的每一个元素时，要特别注意它的位置，找到能够与之对齐的元素，切忌不要一会儿右对齐一会儿居中</p>
+<p><img src="https://img-blog.csdnimg.cn/202002241805553.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><img src="https://img-blog.csdnimg.cn/202002241805551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>图表喜欢的数字格式</li>
+</ul>
+<p>增加图表的整洁感</p>
+<ul>
+<li>如何突出对比</li>
+</ul>
+<p>增加平均线，添加箭头指示</p>
+<h3 id="c-图表也好“色”"><a href="#c-图表也好“色”" class="headerlink" title="c.图表也好“色”"></a>c.图表也好“色”</h3><p>注意图表色调调和</p>
+<p><img src="https://img-blog.csdnimg.cn/202002241811430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3、快速制图"><a href="#3、快速制图" class="headerlink" title="3、快速制图"></a>3、快速制图</h2><h3 id="a-图表模版"><a href="#a-图表模版" class="headerlink" title="a.图表模版"></a>a.图表模版</h3><p>创建自己的图表模版，再复制-粘贴-更改数据源</p>
+<h3 id="b-快速制图"><a href="#b-快速制图" class="headerlink" title="b.快速制图"></a>b.快速制图</h3><p>选中数据区域，按F11新建默认图表类型</p>
+<h3 id="c-添加标签小工具"><a href="#c-添加标签小工具" class="headerlink" title="c.添加标签小工具"></a>c.添加标签小工具</h3><p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_49f78a4b0102wpv3.html">【实用】EXCEL图表标签工具集合</a></p>
+<h1 id="第八章-专业的报告"><a href="#第八章-专业的报告" class="headerlink" title="第八章 专业的报告"></a>第八章 专业的报告</h1><h2 id="1、初识数据分析报告"><a href="#1、初识数据分析报告" class="headerlink" title="1、初识数据分析报告"></a>1、初识数据分析报告</h2><h3 id="a-数据分析报告是什么"><a href="#a-数据分析报告是什么" class="headerlink" title="a.数据分析报告是什么"></a>a.数据分析报告是什么</h3><p>数据分析报告是根据数据分析原理和方法，运用数据来反映、研究和分析某项事物的现状、问题、原因、本质和规律，并得出结论，提出解决问题办法的一种分析应用文体。</p>
+<h3 id="b-数据分析报告的写作原则"><a href="#b-数据分析报告的写作原则" class="headerlink" title="b.数据分析报告的写作原则"></a>b.数据分析报告的写作原则</h3><p>规范性、重要性、谨慎性、创新性</p>
+<h3 id="c-数据分析报告的作用"><a href="#c-数据分析报告的作用" class="headerlink" title="c.数据分析报告的作用"></a>c.数据分析报告的作用</h3><p>主要有展示分析结果、验证分析质量、提供决策依据的作用</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022418384569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-数据分析报告的种类"><a href="#d-数据分析报告的种类" class="headerlink" title="d.数据分析报告的种类"></a>d.数据分析报告的种类</h3><p>专题分析报告；综合分析报告；日常数据通报；</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/PengLee/p/4840472.html">数据分析报告的种类</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20200224184633673.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2、数据分析报告的结构"><a href="#2、数据分析报告的结构" class="headerlink" title="2、数据分析报告的结构"></a>2、数据分析报告的结构</h2><p><img src="https://img-blog.csdnimg.cn/20200223010601213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3、撰写报告时的注意事项"><a href="#3、撰写报告时的注意事项" class="headerlink" title="3、撰写报告时的注意事项"></a>3、撰写报告时的注意事项</h2><ul>
+<li>结构合理，逻辑清晰</li>
+<li>实事求是，反映真相</li>
+<li>用词准确，避免含糊</li>
+<li>篇幅适宜，简洁有效</li>
+<li>结合业务，分析合理</li>
+</ul>
+<h2 id="4、报告范例-P236"><a href="#4、报告范例-P236" class="headerlink" title="4、报告范例 P236"></a>4、报告范例 P236</h2><p>参考资料：</p>
+<p>《谁说菜鸟不会数据分析》（入门篇）</p>
+<p>图表练习参照《谁说菜鸟不会数据分析（入门篇）》-数据</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>【读书总结】《谁说菜鸟不会数据分析》5-8章</p><p><a href="https://teresesong.github.io/tereseBlog/2020/01/23/2020-01-23-【读书总结】《谁说菜鸟不会数据分析》5-8章/">https://teresesong.github.io/tereseBlog/2020/01/23/2020-01-23-【读书总结】《谁说菜鸟不会数据分析》5-8章/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>terese</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-01-23</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-10-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/tereseBlog/" alt="支付宝"></span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/tereseBlog/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/tereseBlog/2020/01/30/2020-01-30-SQL%E5%81%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">SQL做数据分析流程</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/tereseBlog/2020/01/17/2020-01-17-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B1-4%E7%AB%A0/"><span class="level-item">【读书总结】《谁说菜鸟不会数据分析》1-4章</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#第五章-数据分析"><span class="level-left"><span class="level-item">1</span><span class="level-item">第五章 数据分析</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、数据分析方法"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">1、数据分析方法</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-常用数据分析方法-P101"><span class="level-left"><span class="level-item">1.1.1</span><span class="level-item">a. 常用数据分析方法 P101</span></span></a></li><li><a class="level is-mobile" href="#b-综合评价分析法"><span class="level-left"><span class="level-item">1.1.2</span><span class="level-item">b. 综合评价分析法</span></span></a></li><li><a class="level is-mobile" href="#c-杜邦分析法"><span class="level-left"><span class="level-item">1.1.3</span><span class="level-item">c. 杜邦分析法</span></span></a></li><li><a class="level is-mobile" href="#d-漏斗分析法"><span class="level-left"><span class="level-item">1.1.4</span><span class="level-item">d. 漏斗分析法</span></span></a></li><li><a class="level is-mobile" href="#e-矩阵关联分析法"><span class="level-left"><span class="level-item">1.1.5</span><span class="level-item">e. 矩阵关联分析法</span></span></a></li><li><a class="level is-mobile" href="#f-高级数据分析方法"><span class="level-left"><span class="level-item">1.1.6</span><span class="level-item">f. 高级数据分析方法</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、数据分析工具"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">2、数据分析工具</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-数据透视表"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">a. 数据透视表</span></span></a></li><li><a class="level is-mobile" href="#b-数据透视表技巧"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">b. 数据透视表技巧</span></span></a></li><li><a class="level is-mobile" href="#c-多选题分析"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">c. 多选题分析</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#第六章-数据展现"><span class="level-left"><span class="level-item">2</span><span class="level-item">第六章 数据展现</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、揭开图表的真面目"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">1、揭开图表的真面目</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-图表的作用"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">a. 图表的作用</span></span></a></li><li><a class="level is-mobile" href="#b-经济适用图表类型"><span class="level-left"><span class="level-item">2.1.2</span><span class="level-item">b. 经济适用图表类型</span></span></a></li><li><a class="level is-mobile" href="#c-通过关系选择图表"><span class="level-left"><span class="level-item">2.1.3</span><span class="level-item">c. 通过关系选择图表</span></span></a></li><li><a class="level is-mobile" href="#d-图表制作五步法"><span class="level-left"><span class="level-item">2.1.4</span><span class="level-item">d.图表制作五步法</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、图表也疯狂"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">2、图表也疯狂</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-突出显示单元格"><span class="level-left"><span class="level-item">2.2.1</span><span class="level-item">a.突出显示单元格</span></span></a></li><li><a class="level is-mobile" href="#b-项目选取"><span class="level-left"><span class="level-item">2.2.2</span><span class="level-item">b.项目选取</span></span></a></li><li><a class="level is-mobile" href="#c-数据条"><span class="level-left"><span class="level-item">2.2.3</span><span class="level-item">c.数据条</span></span></a></li><li><a class="level is-mobile" href="#d-图标集"><span class="level-left"><span class="level-item">2.2.4</span><span class="level-item">d.图标集</span></span></a></li></ul></li><li><a class="level is-mobile" href="#"><span class="level-left"><span class="level-item">2.3</span><span class="level-item"> </span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#e-迷你图"><span class="level-left"><span class="level-item">2.3.1</span><span class="level-item">e.迷你图</span></span></a></li></ul></li><li><a class="level is-mobile" href="#3、给图表换装"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">3、给图表换装</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-平均线图"><span class="level-left"><span class="level-item">2.4.1</span><span class="level-item">a.平均线图</span></span></a></li><li><a class="level is-mobile" href="#b-双坐标图"><span class="level-left"><span class="level-item">2.4.2</span><span class="level-item">b.双坐标图</span></span></a></li><li><a class="level is-mobile" href="#c-竖形折线图"><span class="level-left"><span class="level-item">2.4.3</span><span class="level-item">c.竖形折线图</span></span></a></li><li><a class="level is-mobile" href="#d-瀑布图"><span class="level-left"><span class="level-item">2.4.4</span><span class="level-item">d.瀑布图</span></span></a></li><li><a class="level is-mobile" href="#e-帕累托图"><span class="level-left"><span class="level-item">2.4.5</span><span class="level-item">e.帕累托图</span></span></a></li><li><a class="level is-mobile" href="#f-旋风图"><span class="level-left"><span class="level-item">2.4.6</span><span class="level-item">f.旋风图</span></span></a></li><li><a class="level is-mobile" href="#g-人口金字塔图"><span class="level-left"><span class="level-item">2.4.7</span><span class="level-item">g.人口金字塔图</span></span></a></li><li><a class="level is-mobile" href="#h-漏斗图"><span class="level-left"><span class="level-item">2.4.8</span><span class="level-item">h.漏斗图</span></span></a></li><li><a class="level is-mobile" href="#i-矩阵图（散点图）"><span class="level-left"><span class="level-item">2.4.9</span><span class="level-item">i.矩阵图（散点图）</span></span></a></li><li><a class="level is-mobile" href="#j-发展矩阵图"><span class="level-left"><span class="level-item">2.4.10</span><span class="level-item">j.发展矩阵图</span></span></a></li><li><a class="level is-mobile" href="#k-改进难易矩阵（气泡图）"><span class="level-left"><span class="level-item">2.4.11</span><span class="level-item">k.改进难易矩阵（气泡图）</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#第七章-美化图表"><span class="level-left"><span class="level-item">3</span><span class="level-item">第七章 美化图表</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、别让图表犯错"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">1、别让图表犯错</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-让图表“五脏俱全”"><span class="level-left"><span class="level-item">3.1.1</span><span class="level-item">a.让图表“五脏俱全”</span></span></a></li><li><a class="level is-mobile" href="#b-要注意的条条框框"><span class="level-left"><span class="level-item">3.1.2</span><span class="level-item">b.要注意的条条框框</span></span></a></li><li><a class="level is-mobile" href="#c-图表会说谎"><span class="level-left"><span class="level-item">3.1.3</span><span class="level-item">c.图表会说谎</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、图表美化"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">2、图表美化</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-图表美化三原则"><span class="level-left"><span class="level-item">3.2.1</span><span class="level-item">a.图表美化三原则</span></span></a></li><li><a class="level is-mobile" href="#b-美化图表的技巧"><span class="level-left"><span class="level-item">3.2.2</span><span class="level-item">b.美化图表的技巧</span></span></a></li><li><a class="level is-mobile" href="#c-图表也好“色”"><span class="level-left"><span class="level-item">3.2.3</span><span class="level-item">c.图表也好“色”</span></span></a></li></ul></li><li><a class="level is-mobile" href="#3、快速制图"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">3、快速制图</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-图表模版"><span class="level-left"><span class="level-item">3.3.1</span><span class="level-item">a.图表模版</span></span></a></li><li><a class="level is-mobile" href="#b-快速制图"><span class="level-left"><span class="level-item">3.3.2</span><span class="level-item">b.快速制图</span></span></a></li><li><a class="level is-mobile" href="#c-添加标签小工具"><span class="level-left"><span class="level-item">3.3.3</span><span class="level-item">c.添加标签小工具</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#第八章-专业的报告"><span class="level-left"><span class="level-item">4</span><span class="level-item">第八章 专业的报告</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、初识数据分析报告"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">1、初识数据分析报告</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-数据分析报告是什么"><span class="level-left"><span class="level-item">4.1.1</span><span class="level-item">a.数据分析报告是什么</span></span></a></li><li><a class="level is-mobile" href="#b-数据分析报告的写作原则"><span class="level-left"><span class="level-item">4.1.2</span><span class="level-item">b.数据分析报告的写作原则</span></span></a></li><li><a class="level is-mobile" href="#c-数据分析报告的作用"><span class="level-left"><span class="level-item">4.1.3</span><span class="level-item">c.数据分析报告的作用</span></span></a></li><li><a class="level is-mobile" href="#d-数据分析报告的种类"><span class="level-left"><span class="level-item">4.1.4</span><span class="level-item">d.数据分析报告的种类</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、数据分析报告的结构"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">2、数据分析报告的结构</span></span></a></li><li><a class="level is-mobile" href="#3、撰写报告时的注意事项"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">3、撰写报告时的注意事项</span></span></a></li><li><a class="level is-mobile" href="#4、报告范例-P236"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">4、报告范例 P236</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/tereseBlog/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/"><span class="tag">实践</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/"><span class="tag">实践总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="tag">问题解决</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/tereseBlog/">Terese&#039;s site</a><p class="is-size-7"><span>&copy; 2022 terese</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/tereseBlog/js/column.js"></script><script src="/tereseBlog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/tereseBlog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/tereseBlog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/tereseBlog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/tereseBlog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

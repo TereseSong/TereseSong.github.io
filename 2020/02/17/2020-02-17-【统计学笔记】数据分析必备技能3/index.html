@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>【统计学笔记】数据分析必备技能3 - Terese&#039;s Blog</title><link rel="manifest" href="/tereseBlog/manifest.json"><meta name="application-name" content="Terese&#039;s Blog"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Terese&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="课程思维导图"><meta property="og:type" content="blog"><meta property="og:title" content="【统计学笔记】数据分析必备技能3"><meta property="og:url" content="https://teresesong.github.io/tereseBlog/2020/02/17/2020-02-17-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD3/"><meta property="og:site_name" content="Terese&#039;s Blog"><meta property="og:description" content="课程思维导图"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://teresesong.github.io/tereseBlog/img/post-10.jpg"><meta property="article:published_time" content="2020-02-16T17:04:56.000Z"><meta property="article:modified_time" content="2022-10-05T10:28:00.393Z"><meta property="article:author" content="terese"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://teresesong.github.io/tereseBlog/img/post-10.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://teresesong.github.io/tereseBlog/2020/02/17/2020-02-17-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD3/"},"headline":"【统计学笔记】数据分析必备技能3","image":["https://teresesong.github.io/tereseBlog/img/post-10.jpg"],"datePublished":"2020-02-16T17:04:56.000Z","dateModified":"2022-10-05T10:28:00.393Z","author":{"@type":"Person","name":"terese"},"publisher":{"@type":"Organization","name":"Terese's Blog","logo":{"@type":"ImageObject","url":{"text":"Terese's site"}}},"description":"课程思维导图"}</script><link rel="canonical" href="https://teresesong.github.io/tereseBlog/2020/02/17/2020-02-17-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD3/"><link rel="icon" href="/tereseBlog/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/tereseBlog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/tereseBlog/">Terese&#039;s site</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/tereseBlog/">Home</a><a class="navbar-item" href="/tereseBlog/archives">Archives</a><a class="navbar-item" href="/tereseBlog/categories">Categories</a><a class="navbar-item" href="/tereseBlog/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/tereseBlog/img/post-10.jpg" alt="【统计学笔记】数据分析必备技能3"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-02-16T17:04:56.000Z" title="2020/2/17 01:04:56">2020-02-17</time>发表</span><span class="level-item"> terese </span><span class="level-item"><a class="link-muted" href="/tereseBlog/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="level-item">1 小时读完 (大约9656个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">【统计学笔记】数据分析必备技能3</h1><div class="content"><h2 id="课程思维导图"><a href="#课程思维导图" class="headerlink" title="课程思维导图"></a>课程思维导图</h2><span id="more"></span>
+<ul>
+<li><p>一、为什么要学习统计学</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41942988/article/details/104345963">https://blog.csdn.net/sinat_41942988/article/details/104345963</a></li>
+<li>1、图标的玄机<ul>
+<li>数据标准化</li>
+<li>捏造趋势<ul>
+<li>如果数据波动性很大，只挑选x轴中对自己有利的数据，就会改变数据的趋势，比如只挑选奇数项</li>
+<li>学习统计学，既可以用来揭露谎言，也可以瞒天过海</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2、被混淆的因果关系</li>
+<li>3、打破权威</li>
+<li>4、数据分析</li>
+</ul>
+</li>
+<li><p>二、统计小百科</p>
+<ul>
+<li>1、概率和机会</li>
+<li>2、统计是什么</li>
+<li>3、变量和常量</li>
+<li>4、数据有几种类型</li>
+<li>5、易混淆的统计术语</li>
+</ul>
+</li>
+<li><p>三、数据抽样</p>
+<ul>
+<li><p>1、数据的收集和整理</p>
+<ul>
+<li><p>全面抽查和抽样调查</p>
+<p>全面调查和抽样调查是数据收集过程中常用的2种方法</p>
+<ul>
+<li><p>全面调查</p>
+<p>全面调查是对调查对象逐个排查</p>
+<ul>
+<li><p>缺点</p>
+<ul>
+<li>耗费人力，物力，财力</li>
+<li>调查时间长</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>得到的数据全面</li>
+</ul>
+</li>
+<li><p>适用场景</p>
+<p>比如：假设要了解本校篮球队12名队员的身高状况</p>
+<ul>
+<li>范围较小</li>
+<li>容易掌控</li>
+<li>不具有破坏性</li>
+<li>可操作性强</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>抽样调查（常用）</p>
+<p>从总体中，抽取若干个体（即样本）进行调查</p>
+<ul>
+<li><p>优点</p>
+<ul>
+<li>耗费的人力物力财力少</li>
+<li>大量节约时间</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>需要具有足够有代表性的样本</li>
+<li>具有不稳定性，容易有所偏差</li>
+</ul>
+</li>
+<li><p>适用场景</p>
+<p>比如：假设要了解一批灯泡的使用寿命</p>
+<ul>
+<li>两个原则：范围广，工作量大</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区分总体、个体、样本、样本容量</p>
+</li>
+<li><p>随机样本<br>在抽取样本时，如果总体中的每一个体都有同等机会被选到样本中，这种抽样称为简单随机抽样，这样得到的样本，称为随机样本</p>
+</li>
+<li><p>总体和样本的关系是什么？</p>
+</li>
+<li><p>选取样本的注意事项</p>
+<ul>
+<li>样本的选取直接影响分析结果</li>
+<li>一般情况下样本容易出现以下问题<ul>
+<li>抽取的样本量过小</li>
+<li>选取的样本主体不均<br>有些说谎者为了制造某种统计结果而故意选择对结果有利的样本主体</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2、收集数据时的误差</p>
+<ul>
+<li><p>什么是抽样误差？</p>
+<ul>
+<li>抽样样本小</li>
+<li>样本主体不均</li>
+</ul>
+</li>
+<li><p>什么是未响应误差？<br>抽样调查中，人们因为种种原因没有对调查做出反应，这种误差称为未响应误差</p>
+</li>
+<li><p>什么是响应误差？</p>
+<p>抽样调查中，人们因为种种原因没有真实反映他们对观点，这种误差称为响应误差</p>
+<ul>
+<li><p>🌰</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjMxNmZjYjYtNzIxNS00MTRiLWE4MjItNDllZjU1NzBmMGUxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>小结</p>
+<ul>
+<li>抽样误差是由于抽样方法所导致的系统误差，在抽样中不可避免</li>
+<li>响应误差和未响应误差是由于主观因素导致的，他们都会影响对真实世界的了解，在设计调查方案和进行调查过程中要尽量避免</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、常用的抽样方法</p>
+<ul>
+<li><p>随机抽样</p>
+<p>是指将调查总体的观察个体全部编号，再随机抽取部分观察个体，组成样本</p>
+<ul>
+<li>优点</li>
+<li>缺点</li>
+</ul>
+</li>
+<li><p>分层抽样</p>
+<p>先把要研究的总体按照某些性质分类，再再各类中分别抽取样本</p>
+<ul>
+<li>优点<ul>
+<li>样本代表性好，抽样误差减少</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>抽样过程繁杂</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>整群抽样</p>
+<p>是指先把总体分成若干群，再从这些群中抽取几群；然后再在这些抽取的群中对个体进行简单随机抽样</p>
+<ul>
+<li>优点<ul>
+<li>便于组织、节省经费</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>抽样误差大于单纯随机抽样</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>系统抽样</p>
+<p>先把总体中的每个单元编号，然后随机选取其中之一，作为抽样的开始点进行抽样，通常从开始点开始按照编号进行所谓等距抽样</p>
+<ul>
+<li>优点<ul>
+<li>易于理解、简便易行</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>总体有周期或增减趋势时，易产生偏差</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>4、设计调查问卷的原则</p>
+<ul>
+<li>合理性<br>密切与调查主题相关</li>
+<li>逻辑性</li>
+<li>明确性</li>
+<li>全面性</li>
+<li>非诱导性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>四、描述统计—图表描述</p>
+<ul>
+<li><p>1、数据的计量尺度</p>
+<ul>
+<li><p>定类尺度</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjE3ZDc5OTctOTJhOS00M2ZlLThiYjItNWEzMzc1YmFlZWU0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>指的是按照某种属性对事物进行平行的分类</p>
+<ul>
+<li>定类尺度的最大特点是数据的类型没有顺序和大小区分</li>
+<li>案例</li>
+<li></li>
+</ul>
+</li>
+<li><p>定序尺度</p>
+<p>不仅对事物分成不同类型，还进行了排序</p>
+<ul>
+<li>不仅能够量化数据，还能够测量不同类型的顺序，但这些类别具体差别多少不能测量</li>
+</ul>
+</li>
+<li><p>定距尺度</p>
+<p>不仅能将事物区分为不同类型，并进行了排序而且还可以准确地指出类别之间的差距是多少</p>
+<ul>
+<li>最大的特点是可加减，不仅能比较各类事物的优劣还能计算出事物之间具体查多少</li>
+<li>定距尺度能对事物进行更准确的测度</li>
+</ul>
+</li>
+<li><p>定比尺度</p>
+<p>不仅能将事物区分为不同类型，并进行了排序，而且可以测量不同变量之间的比例关系</p>
+<ul>
+<li>最大的特点是可以进行加减乘除四则运算</li>
+<li>与定距尺度属于同一层次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2、定类数据的图表描述</p>
+<ul>
+<li><p>统计各个类别的频数和频率，用饼图、柱形图表示频率分布</p>
+</li>
+<li><p>eg：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZWZjYmQxOWItMTc3My00YzBiLWI0ZjQtY2UxMmI3ZmFkOGQ1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>spss实操演示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、定序数据的图表描述</p>
+<ul>
+<li>定类尺度的数据描述和定序尺度的数据描述都是用【频数分布表】、【饼图】和【条形图】这三种方式来表示，只不过定类数据的分类之间是平行关系，定序数据的各个分类之间进行来排序而已</li>
+<li>spss实操演示</li>
+</ul>
+</li>
+<li><p>4、定距数据的图表描述</p>
+<ul>
+<li><p>案例</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMzJkZTBkYjAtNzMyNC00ODVkLTk1MmQtN2UzZDI2M2I3NzA4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>描述定距数据</p>
+<ul>
+<li><p>点线图</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvY2FkYmJkMzAtZTQzZC00M2NkLTgxZTMtMDM1NjU4N2IxYmFmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>优点<ul>
+<li>点线图这种表达方式不仅简化了数据，而且没有任何信息损失，它适用于变量取值较少时使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>茎叶图</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvY2VlMmFiMjctMGMwZS00YWU0LThiYTQtZmY2MzQzZGNlYjAyLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>优点<ul>
+<li>茎叶图既展示了分布形状又有原始数据，能够展示数据的全貌</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>直方图</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmEzMDQxZWEtYWM5YS00MjgwLTlhMjUtYzAwNjQ3Nzc5MzczLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>优点：适用于大量观测的情况，能很好地显示频数分布状况</li>
+<li>缺点：会丢失很多数据的细节</li>
+</ul>
+</li>
+<li><p>盒形图</p>
+<ul>
+<li><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYWM1MDZiZTItOTYzNy00ZWJhLTkwYjAtMmM4OTEzMDM5ZThhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOWE5YjUyYzAtNGE4Mi00ZDY4LTgxNWUtYTczOGE4NDg4MmQwLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNzUxYTUwZGMtZWQzNy00MjU0LTk5YzEtNWQwNDNkNzJmZTQ1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>定距数据几种图示方法比较</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmQ1MTk3MWItYWExZS00ZGI3LWFmM2MtMjVjNTllYWM5YjRhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>实操演示<br>用SPSS对定距数据做图表描述</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5、多变量数据的图表描述</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjNiZDgyYTctYzgyNy00MDljLTk4YzktZDg2YTI1NjM0ZTg2LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>散点图<br>适用于两个变量的描述</li>
+<li>气泡图<br>适用于三个变量的描述</li>
+<li>雷达图<br>适用于三个及以上变量的描述</li>
+<li>spss实操演练</li>
+</ul>
+</li>
+<li><p>6、如何选择合适的图表</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41942988/article/details/104289633">https://blog.csdn.net/sinat_41942988/article/details/104289633</a></li>
+<li></li>
+<li>如何选择合适的图表<ul>
+<li>展示比较<ul>
+<li>基于分类的比较</li>
+<li>基于时间的比较</li>
+</ul>
+</li>
+<li>展示分布<ul>
+<li>单个变量</li>
+<li>2个变量</li>
+<li>3个变量</li>
+</ul>
+</li>
+<li>展示联系<ul>
+<li>2个变量的联系</li>
+<li>3个变量的联系</li>
+</ul>
+</li>
+<li>展示构成<ul>
+<li>随时间变化</li>
+<li>静态</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>7、有效图表的几个基本要素</p>
+<ul>
+<li><p>第一，坐标轴必须标记</p>
+</li>
+<li><p>第二，标题要提炼出重点，不要用模棱两可的标题</p>
+</li>
+<li><p>第三，备注数据来源，保证可信度</p>
+</li>
+<li><p>第四，同比数据的解读很重要</p>
+<ul>
+<li><p>小总结</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNWVhMjhiZWItMWNhMi00MjQyLTkzNzUtODc2ZmUwOWMxNzFkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZWE1YzdjZTctNDc3OC00MWM5LTg4MjktMjMyNzA0OWNiYzcxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>8、增强图表表达力的几种方法</p>
+<ul>
+<li><p>改造饼图</p>
+<ul>
+<li><p>使用创意图例联系主题，赋予创意</p>
+</li>
+<li><p>eg</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDU1MDVjNGQtNTI0NC00ZWMyLWI3OGYtMzViYmZjN2IyOWRkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTkwYzk3ZDUtMDkwZS00OGMyLWJkMzktYWI1MDNjM2VkYTE0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>改造柱形图或条形图</p>
+<ul>
+<li><p>经常用小汽车、小房子、小树、小人、银币等图片替换</p>
+</li>
+<li><p>最好使用透明的矢量图</p>
+</li>
+<li><p>eg</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYThhMzJmZmUtNGZhOS00MjcyLWJjMDctMGUwYzc1Zjc2YWRiLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMjZjNDEyZDEtYTYyNi00M2U1LTliMWYtOGZjNmNhZjZlZTQ3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>改造面积图</p>
+<ul>
+<li>常见的有钞票、黄金、油枪、国旗等</li>
+<li>填充曲线图下的面积图</li>
+</ul>
+</li>
+<li><p>使用logo等形象化图表对象</p>
+<ul>
+<li><p>比如使用公司logo、国旗来表示分类标签</p>
+</li>
+<li><p>eg</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZTRlOTIxOWUtZWU3ZS00Y2NlLTljMzgtOTAxY2ZiN2M3ZmUzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>用地图来加强图表</p>
+<ul>
+<li><p>eg</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNzVlMDhjMjYtNGI5Mi00ZDI1LTlmOTQtNTU1ZjNkODE0NDhjLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>合理的图表修饰</p>
+<ul>
+<li><p>创意活泼的方式修饰图表</p>
+</li>
+<li><p>eg</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNmM0MmY4YjEtMDMxYS00YjcxLTllZjItNmQ2ZWI1N2NjYjM2LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNTUwMWYyMWUtMTcwZC00YzBkLThmMDgtMDY5NGRmOGEyNzhmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>变换百分比的表现形式</p>
+</li>
+</ul>
+</li>
+<li><p>9、可视化图表的几个注意事项</p>
+<ul>
+<li><p>不要使用office自带的或者其他劣质的剪贴画，使用高质量的图片</p>
+</li>
+<li><p>所使用的图片与图表的主题有较好的相关性，寓意准确，恰当无异议</p>
+</li>
+<li><p>图片的色彩要与图片协调，可以从图片中提取颜色来做图表</p>
+</li>
+<li><p>饼图的顺序要得当</p>
+</li>
+<li><p>在折线图尽量避免用虚线</p>
+</li>
+<li><p>数据的罗列要尽可能的符合逻辑</p>
+<ul>
+<li>对类目按字母排序</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTcxYzA5M2QtMjFjNS00MGZjLWIxZjktMDlmMzYxY2ZhMGE1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>确保数据不会因为设计而丢失或者覆盖</p>
+<ul>
+<li>在面积图使用透明效果</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDIzZjY4YWUtNjA3MS00MGZmLWIwZjYtZWIzYmM3ZmIyMjY5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>图表应尽力避免耗费读者过多的精力</p>
+<ul>
+<li>添加辅助的图形元素来使数据更易于理解，比如在散点图中增加趋势线</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTFmM2YwZGEtMjY2Ny00NDMzLWFkOTUtNjQ0NmZiNTdmYTlkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>确保图表的呈现要符合实际情况</p>
+<ul>
+<li>气泡的大小应该和数值一样</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOWJhMDlhMTYtOWRhMi00MGUwLWJhZDktYjM3Zjg5Yzc4MDJjLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>在热图中尽力避免使用不同的颜色，可以使用单一颜色不同深浅</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvY2FkYTkxYmEtZmU1YS00ZGVhLWJiOWMtZWYwMjI2OWVkMTEzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>柱形图柱子之间的间距不宜过宽或者过窄，最好调整为宽的1&#x2F;2</p>
+</li>
+<li><p>数据的对比要直观的呈现差异</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjc5MTcwNGMtNTNiMC00MzMwLTkzNWItYTI1NmU4ODczMzMxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>尽量避免使用三维图，2D为王道</p>
+</li>
+<li><p>可视化图表实质在于用一种更加有助于理解和引导的方式去表达信息，尽可能减轻用户获取信息的成本</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZGE2ZGQzZWUtNjc4MS00MmQ3LWI4MTMtYTFmMzg4NGNkMTc0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>五、描述统计-统计量描述</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_41942988/article/details/104351729">https://blog.csdn.net/sinat_41942988/article/details/104351729</a></li>
+<li>1、集中趋势</li>
+<li>2、离中趋势</li>
+<li>3、偏态和峰态</li>
+<li>4、数据标准化的几种方法</li>
+</ul>
+</li>
+<li><p>六、推断统计-参数估计</p>
+<ul>
+<li><p>1、概率和概率分布</p>
+<ul>
+<li><p>确定性现象</p>
+<ul>
+<li>必然事件<ul>
+<li>概率为1</li>
+</ul>
+</li>
+<li>不可能事件<ul>
+<li>概率为0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不确定现象（随机现象）</p>
+<ul>
+<li><p>随机现象可能发生的结果，称为随机事件</p>
+</li>
+<li><p>随机现象可以通过随机试验来研究</p>
+</li>
+<li><p>随机试验</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjQwMjk4NTYtOTAyZi00OTlhLWEyMGQtODkyODEyYzgyOWNlLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>随机变量</p>
+</li>
+<li><p>随机试验的偶然性和规律性</p>
+<ul>
+<li>偶然性（一次试验）<br>在一次随机试验中，可能出现这种结果，也可能出现那种结果，具体出现什么结果具有偶然性</li>
+<li>规律性（大量重复试验）<br>偶然中包含着某种必然和规律</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>概率和概率分布就是为了研究这种大量重复试验下产生的规律</p>
+</li>
+<li><p>概率的定义<br>数量指标，用来描述随机事件发生的可能性大小</p>
+</li>
+</ul>
+</li>
+<li><p>2、点估计和区间估计</p>
+<ul>
+<li><p>参数和统计量</p>
+<ul>
+<li><p>参数</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMWI2NWU2MWEtMmM3My00ZTU5LWE1ZGQtZDJiOGIxZWYzYzhkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>统计量</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZTZlNDY1NWYtOTM3Ny00YTk2LWE3YTYtZjI5Njk5MTY3ZmQ4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>点估计-点估计量</p>
+<ul>
+<li><p>样本均值被称为总体均值的点估计量</p>
+</li>
+<li><p>点估计值仅仅是总体均值的一个近似值，它没有反映出这个近似值的误差范围，使用起来把握不大</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZGVkMDMzODctOTI0Yy00NTg2LTkwZGUtNTEzNTFiMmE0OTNmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>区间估计</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZTIyMmZiNzEtZWI2MC00MGY2LTk1YTAtNWFmMzViNjg2Nzk2LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>置信区间</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjFiMTllMDctMzM3My00NjBiLTg0YzAtMjViYzM3NThhZTIzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZmMzMzFiMGEtODkyMC00NTFmLThlNTYtOTU1YTk1OGE3MmZhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>置信水平</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOWJiZmQ3MDEtMjBmYi00YWRkLThkMTktNzhjNDg2MGVhMDM1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>显著性水平</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMmM0NGY0NDUtNzEyZC00ZDEzLThhN2EtODU1M2YzNjc3MTUzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZmY4NmY4MzktNTM2Ny00ODJlLWE3YzctZDVmYzI1ODdjNjY0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>显著性水平指的是总体参数落在置信区间外的可能性大小置信水平+显著性水平&#x3D;1</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、总体参数的估计</p>
+<ul>
+<li><p>样本统计量</p>
+<ul>
+<li>样本均值</li>
+<li>样本方差</li>
+<li>样本比例</li>
+</ul>
+</li>
+<li><p>样本统计量估计总体参数</p>
+<ul>
+<li><p>样本均值估计总体均值</p>
+</li>
+<li><p>样本方差估计总体方差</p>
+<ul>
+<li>样本方差会小于总体方差</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTU2Y2YzYzctNzQ1MC00MjYyLTg0ZmYtM2QzODU4MmE1YjViLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>样本比例估计总体比例</p>
+</li>
+<li><p>要点</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmRiZmU2NGItMzhlZi00OTM0LWIwODgtZWE1YTVlODUzY2YwLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>4、三大抽样分布</p>
+<ul>
+<li><p>总体分布</p>
+</li>
+<li><p>样本分布<br>定义：样本分布指的是单个样本中各个观察值的分布，当样本容量逐渐增大时，样本分布会逐渐接近总体分布</p>
+</li>
+<li><p>抽样分布</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDdhYzBhMDktYzJhMS00ODgzLWFlNDMtMTk5Njg1NTNhMjFmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjUxZjk5NDItMjk0NC00MmYyLTk5YzAtMzhhYTNkNGE2ODhlLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMWJjMmUzMTAtMWE3Mi00M2M2LThmYmQtOWVhNGNjNTEzMTQ4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>定义</p>
+<ul>
+<li><p>为什么要研究抽样分布？</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZWNkOTNmYWItMGYzMC00YTJkLTkzZGMtMWI0MzU0NmE0N2M3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>几个常用的抽样分布</p>
+<ul>
+<li><p>卡方分布（x^2分布）</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDE2ZGMzMDQtM2NlNi00YTE5LThkNGUtODdmNWRlODczM2EzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>卡方分布常用于假设检验和置信区间的计算</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTM4NTY4MTktMzQ5Zi00NzkzLTg4ZGMtODI3YmE1MTM2Nzc0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>T分布</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDYyYmQ5ZjItOGQxMi00YjViLTk1MmYtMmViMWQ0NTIwNzcxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>F分布</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNTBjYTYyMGQtNDAxNi00M2YzLTg5ZTYtNzE2Nzc0YzIxYzJiLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>F分布主要用于方差分析，协方差分析和回归分析的分析</p>
+</li>
+</ul>
+</li>
+<li><p>正态分布</p>
+<ul>
+<li><p>图形特点</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNGY5ZjE2YzUtMmY3Ni00YjYzLWJjNWQtMTA0YjM1MjEzZjRhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNGY5ZjE2YzUtMmY3Ni00YjYzLWJjNWQtMTA0YjM1MjEzZjRhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNGY5ZjE2YzUtMmY3Ni00YjYzLWJjNWQtMTA0YjM1MjEzZjRhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>由两个参数确定，一个是均值，另一个是标准差</p>
+</li>
+<li><p>均值决定量图形的中心位置</p>
+</li>
+<li><p>标准差决定了图形峰的陡峭程度，标准差越大，说明数据的离散程度越大，数据越分散，曲线就会越扁平</p>
+</li>
+<li><p>标准正态分布</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYWJjYzE2YzItMDJhNS00YjIwLTk4ZTUtOTNiOGZlMjk0MTI0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li><p>标准正态分布的概率密度函数用，分布函数用F（X）表示</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjhlODQxNDMtYTFiZS00MmQ1LThlZDctZDc4N2VkOTc2OGI5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>对于分布函数F(X),有F(-X)&#x3D;1-F(X)</p>
+</li>
+<li><p>通过标准正态分布函数的数值表查找概率值P</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvODgxY2U3NjEtNDgwYi00ZDg5LWE5NTktNjM0OTgyYzc5OGEzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>经验法则</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvM2JlNjc3ZDAtZDYzYi00YTI0LWE2OTktMGY5MTQ4ZTcxNTk4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>一般的正态分布函数求它的概率值，先转化为标准正态分布</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvM2Q0YjZkOTItODRjMy00ODAyLTgyZDctZjAxOThhZjk0MjgxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区别</p>
+<ul>
+<li>案例-调查一所中学所有学生的身高<ul>
+<li>总体分布</li>
+<li>总体分布往往是未知的，很多场合不可能获得对所有元素的观察值</li>
+<li>样本分布</li>
+<li>抽样分布<ul>
+<li>样本均值的概率分布，就是均值的抽样分布</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5、样本估计量的抽样分布</p>
+<ul>
+<li><p>中心极限定理</p>
+<ul>
+<li><p>内容</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDVkZGYxNjMtYjNkZi00ZmE5LTgwZWYtMTMyNzQ5YjM3MDRkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNjYwYTg3OTktN2JiYy00MjNiLTliZjMtYTY2OThhZjI3YTkyLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>样本均值的分布</p>
+<ul>
+<li>无论总体是什么分布，只要N足够大，样本均值的抽样分布就会接近正态分布</li>
+</ul>
+</li>
+<li><p>样本均值的抽样分布与总体分布的关系</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTViNTNiOWYtZGY1MC00NzQ4LWJkZDctOTEzYzgyMDhiNWViLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+<li>1、当总体分布服从正态分布时，任意一个样本，无论总体容量多大，样本均值都服从正态分布</li>
+<li>2、当总体分布是非正态分布时，只有样本足够大（一般N&gt;30），我们就认为样本均值服从正态分布</li>
+<li>3、当总体分布是非正态分布时，如果样本是小样本（N&lt;30），样本均值的分布不服从正态分布</li>
+</ul>
+</li>
+<li><p>样本均值的抽样分布应用</p>
+<ul>
+<li><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMGJlZjJlY2UtMWNmNi00MTIzLWJjYmMtNGI4NmMyNTZmMGRhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMzQ0MzYzYTUtYzA2MS00MjAwLWFiOGYtOTc3YzJiMjY2ZGNhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmYyZTNjNzgtNTc1MC00MTZkLTgxNGQtMjJmMmU3MDEyNzI4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>样本均值的抽样分布</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmQyNDZjZDUtMmZjYy00ZjM0LTlkMGQtOGI1NWU5NTBiZjI3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>样本比例的抽样分布</p>
+<ul>
+<li><p>样本比例定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMTZmMGI1M2ItYWI4OS00YjViLTk4ZjktYWZiYTMwNTc3ODY5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>样本比例的抽样分布定义</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOTUzNGE3NjQtZDMwMi00ODlkLWI0N2MtMjA4Y2VmNzRmODUwLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>应用样本比例的抽样分布应用</p>
+<ul>
+<li><p>根据小概率事件原理，不可能发生的事发生了,就可以推翻原假设；</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNmU0NDk0NzMtZDE2MS00ODg1LWFlNGItNDAxODcxZWY1ODlmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYWRlNTI3NmItOGQ3MC00ZjcwLTliNzQtODE1YjZjMjkyYzYwLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjVjYmE0ZDYtZjg3Mi00OWJiLWIzNzctNDllMDcwZTZlM2M2LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>比如说假设这个平均寿命为60，平均寿命低于57为小概率事件，但是发生了小概率事件，那么原假设就不正确</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>样本方差的抽样分布</p>
+<ul>
+<li>用样本方差去推断总体方差就必须知道样本方差的抽样分布</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDUwMzg3MmUtMmE1MC00MTJhLTliNGItM2RlMjU5YTlhZTliLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>七、推断统计-假设检验</p>
+<p>假设检验是除了参数估计的另一种统计推断方法</p>
+<ul>
+<li><p>1、假设检验的原理</p>
+<ul>
+<li><p>小概率思想+反证法</p>
+<ul>
+<li><p>小概率思想</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYWE5M2RjYzktMjNmMi00N2VhLThjZTUtODVlYWEzYWJmMWI3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMTkzMGE2MzItOTc5Yy00OWFhLTg4MDgtNDhjNGI0MzlhZjhkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>反证法</p>
+<p>如果P则非Q，反证法是用到它的逆否命题：如果Q则非P</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDE5NDhiNjEtZDkzNy00ZWY2LTkzNGUtNDQ2OTRmZjFmZjg5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2、原假设与备择假设的确定</p>
+<ul>
+<li><p>原假设</p>
+<p>原假设是研究者想收集证据证明不正确的假设</p>
+<ul>
+<li><p>除非有足够的证据进行反驳，否则你将接受这个断言</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvY2I0MzA4NGYtYWI2ZS00NGNjLWIxMTQtMDQ0MzJhMDdjOWJjLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>备择假设<br>备择假设是研究者想收集证明其正确的假设</p>
+</li>
+<li><p>原假设和备择假设的设置要符合这样的原则：先确定备择假设，再根据对立面确定原假设</p>
+<ul>
+<li><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDdhZGI4ZjEtZTgxNy00ZjNlLWI1NTctYzNlZGZlYTc1ZDBiLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTAzMjBlOTMtNjM3ZC00ZTY2LTkwOGYtYzlhZjdkYjVlNWU1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYTAzNzk2ZDUtOWMyMS00MDBhLWIxYWQtZGU4MTExZTY4ZmFiLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3、假设检验的基本概念</p>
+<ul>
+<li><p>统计推断的特点就是得出这个结论有很大可能性，但依然有一定但错误率</p>
+</li>
+<li><p>假设检验的类型</p>
+</li>
+<li><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYmFkMGYwZjAtMzI2Ni00MjQ2LTg1YjctYmU1ZGNjMDAxNTkxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>总体均值的检验</p>
+<ul>
+<li><p>Z检验：一般用于大样本（即样本容量大雨30）的均值差异性检验</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjgyZmRiZGUtODBhOS00ZGU2LWIzMGUtZjQxM2MxYjMzNjE3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>T检验：用于小样本的均值检验，而且T检验可以在总体方差不知道的情况下检验样本平均数的显著性</p>
+<ul>
+<li>在T检验之前有时候会用到F检验，它是对两个总体的方差是否有显著性差异所进行的检验，所以又称为方差齐性检验</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>总体比例检验</p>
+<ul>
+<li>用到的是Z检验</li>
+</ul>
+</li>
+<li><p>总体方差检验</p>
+<ul>
+<li>用的是F检验和卡方检验</li>
+</ul>
+</li>
+<li><p>假设检验中的两类错误</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZGU3NzZjYjQtNDY0Zi00NjIxLWFkNmYtZmRjZGE4ZWZkNmE2LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li><p>第一类：原假设正确，应当接受却拒绝了原假设</p>
+</li>
+<li><p>第二类：原假设错误，应当拒绝却没有拒绝原假设</p>
+</li>
+<li><p>两类错误的关系</p>
+<ul>
+<li><p>显著性水平是用来确定是否接受原假设的概率标准，表示下总结的可靠程度，并不能做出绝对肯定或绝对否定的结论</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMjc2Y2U4YzgtNzFiOC00ZjM3LWI2NmUtY2Q0YWU5MDQ4NTUyLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjFmMGRmMzUtYTYzYy00NGY2LWE3YzQtMTRmMjE5YzE4OTg0LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li><p>常用的显著性水平</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYjMwMTFjNzctMjIzYi00ZDYwLTgzMmQtNThhZGM3M2VlNzA3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>单侧检验和双侧检验</p>
+<p>在做假设检验时，需要选择单侧检验还是双侧检验</p>
+<ul>
+<li><p>单侧检验</p>
+<ul>
+<li><p>定义：再分布的一侧检验小概率事件发生的概率</p>
+</li>
+<li><p>适用范围：如果统计指标只有上限或只有下限，则用单侧检验</p>
+</li>
+<li><p>单侧检验（左侧）</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMzhjZGNkMWYtYjllMS00OTVmLWEwNTUtZjkwNWFlNzcwM2QyLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvM2FlMWZjZDEtMGQxYi00ZWVlLTgzMDEtMjUzOWM5MDdkNmQ3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>单侧检验（右侧）</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvODg3MDgyMmItYjUyNi00OTZlLTg3MzctZDExZGYyZTZjNzI4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDg4NTAxNGUtNDBjZS00OGVjLTlhZmEtOTMzNWM1NmE0OGI5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>双侧检验</p>
+<ul>
+<li><p>定义：在分布的两端检验小概率事件发生的概率</p>
+</li>
+<li><p>适用范围：如果统计指标的范围在一个区间内，则用双侧检验</p>
+</li>
+<li><p>解析</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNGUzYTdiN2YtYjdlZS00MjVmLWFmMzItYjVmNjI5ZjY1MTkyLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYWQ2ZjE4MWMtZWNjZi00MmFlLWI1ZTQtM2RkYTc1MmMzMmMzLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>P值</p>
+<ul>
+<li><p>定义：</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDgwZDRhMmEtYWVkZC00YjdmLWEzM2ItMzBlMDhjZDkwM2ZjLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjEzMjBlYmEtYTg0ZS00YTUyLWE1MDYtMDg4ZDgxOTZhOWQ1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOGMxNDcwZTAtNzJjZi00MWM4LWEwNzAtMDYzMTViMDRhNjdmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>4、总体均值的检验-Z检验</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDZmZDJmY2MtODI3ZC00Mzg4LWI3NmMtMTQ1ZGQxMTY2NzM3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>5、总体均值的检验-T检验</p>
+<ul>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNzg5MzNmMDUtMWVjNS00NWRiLWIwOGItNzkyMWNmZWI4ZWI4LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+<li><p>6、总体方差和总体比例的检验</p>
+<ul>
+<li><p>总体方差的检验</p>
+<ul>
+<li><p>两种情况</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvM2I4ZDg1MWMtZDFmMC00MThmLWFlNjUtMTQzNDFkOWQwNGQ5LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>F检验</li>
+<li>X^2检验</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>八、相关分析和回归分析</p>
+<ul>
+<li><p>1、变量之间的关系</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMWFiZGI2N2UtZWMxYS00MTI3LTg5NGMtN2E4NGYzMDZhNmZmLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li><p>确定性的关系：函数关系</p>
+<ul>
+<li>函数关系的特点<br>变量之间是一一对应的确定关系Y随X一起变化，并完全依赖于x各观测点落在一条直线上​​​</li>
+</ul>
+</li>
+<li><p>非确定性的关系：相关关系</p>
+<p>相关关系又可以分为因果关系和平行关系</p>
+<ul>
+<li><p>相关关系的特点？</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYzZkOGNjZmEtNmUyZS00OWFhLWJlYWMtZmFmMjM1MDZlOWY1LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>相关关系有哪些类型？</p>
+<p>相关关系不等于存在实际关系 数学关系不等于实际关系</p>
+<ul>
+<li><p>正线性相关</p>
+<ul>
+<li><p>正相关不一定就是正线性相关，还要看具体的函数f(x)是一次函数、二次函数还是其他</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDllY2VlNGEtMzAwNy00NzBlLThkZjYtZmRmMTA1NTA0YTQxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+</ul>
+</li>
+<li><p>负线性相关</p>
+</li>
+<li><p>不相关</p>
+</li>
+<li><p>因果关系（回归分析）</p>
+<ul>
+<li><p>一种原因引起的结果</p>
+</li>
+<li><p>多种原因引起的结果</p>
+</li>
+<li><p>变量之间互为因果</p>
+</li>
+<li><p>回归分析确定</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvMDg4YjMwZDAtYjZhNC00YzkzLTg3OGUtOGEyMjM5MzMyNjExLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>首要确定自变量和因变量</li>
+<li><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvOWZhZDM4Y2YtNTJkMi00ODIyLThlY2QtOWFhMjg1M2EyMzBkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>平行关系（相关分析）</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZmVmMTc5ZjctMmQwMS00M2JkLTgxZDMtYTBkYzcxYzgxYTNhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>总结</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvYzJlY2NlZTQtNDJkYi00ZmFkLWFhODYtNWY5ODYyOTVmZjlkLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>案例分析</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvODA4ZGY1ZWQtMGMxZS00ODc4LWEwMjMtZWQzMjhjZDQzNTJlLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>进行天晴时数和听众人数的回归分析，求误差最小的最佳拟合函数</p>
+<ul>
+<li><p>先求x和y的均值，再求最佳拟合线的斜率b，再求a</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDgxNzhlMmEtNjhiNy00NGNhLWJiYTMtNTgwZDBiZThlMGQ3LTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZjA4ZmMyNjYtNjUzYi00MjVjLTg2NzItZGY2ZDFlYzkzMWQxLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>有一种方法可以用于衡量直线拟合的程度——计算相关系数</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDFiNDdmODEtYWM1ZC00MzRkLTgyZDAtOTdkNGU4NzFlZTNhLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li><p>相关系数</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvZDliNzFjMzYtNDlhMS00YjhhLTlhODQtZDFkMzQ4YTA3ZjZjLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>如果R&#x3D;-1，则数据完全负线性相关</li>
+<li>如果R&#x3D;1，则数据完全正线性相关</li>
+<li>如果R&#x3D;0，不存在相关关系</li>
+</ul>
+</li>
+<li><p>计算公式</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNDA1Yzc3NjQtYzI3NC00ZmVlLThlNjYtYTkxYzNmYzQzNTZiLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcubXVidS5jb20vZG9jdW1lbnRfaW1hZ2UvNjBiMDU0YzEtYjBkNC00ZDcyLWIxMDUtMjAwZDM5MTYxYWMwLTEyNzIyNjguanBn?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+</li>
+<li><p>spass相关分析案例</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2、相关分析和回归分析</p>
+</li>
+<li><p>3、如何求最佳拟合线</p>
+</li>
+<li><p>4、相关系数</p>
+</li>
+<li><p>5、SPSS实操案例分析</p>
+</li>
+</ul>
+</li>
+<li><p>九、方差分析</p>
+<ul>
+<li>1、为什么要进行方差分析</li>
+<li>2、什么是方差分析</li>
+<li>3、单因素方差分析</li>
+<li>4、双因素方差分析<ul>
+<li>无交互作用的双因素方差分析</li>
+<li>有交互作用的双因素方差分析</li>
+</ul>
+</li>
+<li>5、SPSS实操案例分析</li>
+</ul>
+</li>
+<li><p>十、主成分分析</p>
+<ul>
+<li>1、主成分分析的原理</li>
+<li>2、主成分分析的几何解释</li>
+<li>3、SPSS主成分分析案例</li>
+</ul>
+</li>
+<li><p>十一、因子分析</p>
+<ul>
+<li>1、因子分析的原理</li>
+<li>2、SPSS因子分析案例</li>
+</ul>
+</li>
+<li><p>十二、聚类分析</p>
+<ul>
+<li>1、什么是聚类</li>
+<li>2、关于聚类分析</li>
+<li>3、SPSS系统聚类案例分析</li>
+</ul>
+</li>
+</ul>
+<p>参考课程：</p>
+<p>轻松驾驭统计学—数据分析必备技能</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>【统计学笔记】数据分析必备技能3</p><p><a href="https://teresesong.github.io/tereseBlog/2020/02/17/2020-02-17-【统计学笔记】数据分析必备技能3/">https://teresesong.github.io/tereseBlog/2020/02/17/2020-02-17-【统计学笔记】数据分析必备技能3/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>terese</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-02-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-10-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/tereseBlog/" alt="支付宝"></span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/tereseBlog/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/tereseBlog/2020/02/18/2020-02-18-SQL%E6%B7%98%E5%AE%9D%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">SQL淘宝用户行为分析</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/tereseBlog/2020/02/10/2020-02-10-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD2/"><span class="level-item">【统计学笔记】数据分析必备技能2</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#课程思维导图"><span class="level-left"><span class="level-item">1</span><span class="level-item">课程思维导图</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/tereseBlog/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/"><span class="tag">实践</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/"><span class="tag">实践总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="tag">问题解决</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/tereseBlog/">Terese&#039;s site</a><p class="is-size-7"><span>&copy; 2022 terese</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/tereseBlog/js/column.js"></script><script src="/tereseBlog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/tereseBlog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/tereseBlog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/tereseBlog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/tereseBlog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>【读书总结】《谁说菜鸟不会数据分析》1-4章 - Terese&#039;s Blog</title><link rel="manifest" href="/tereseBlog/manifest.json"><meta name="application-name" content="Terese&#039;s Blog"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Terese&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="第一章 数据分析那些事儿"><meta property="og:type" content="blog"><meta property="og:title" content="【读书总结】《谁说菜鸟不会数据分析》1-4章"><meta property="og:url" content="https://teresesong.github.io/tereseBlog/2020/01/17/2020-01-17-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B1-4%E7%AB%A0/"><meta property="og:site_name" content="Terese&#039;s Blog"><meta property="og:description" content="第一章 数据分析那些事儿"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://teresesong.github.io/tereseBlog/img/post-5.jpg"><meta property="article:published_time" content="2020-01-16T17:17:19.000Z"><meta property="article:modified_time" content="2022-10-05T10:28:34.643Z"><meta property="article:author" content="terese"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://teresesong.github.io/tereseBlog/img/post-5.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://teresesong.github.io/tereseBlog/2020/01/17/2020-01-17-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B1-4%E7%AB%A0/"},"headline":"【读书总结】《谁说菜鸟不会数据分析》1-4章","image":["https://teresesong.github.io/tereseBlog/img/post-5.jpg"],"datePublished":"2020-01-16T17:17:19.000Z","dateModified":"2022-10-05T10:28:34.643Z","author":{"@type":"Person","name":"terese"},"publisher":{"@type":"Organization","name":"Terese's Blog","logo":{"@type":"ImageObject","url":{"text":"Terese's site"}}},"description":"第一章 数据分析那些事儿"}</script><link rel="canonical" href="https://teresesong.github.io/tereseBlog/2020/01/17/2020-01-17-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B1-4%E7%AB%A0/"><link rel="icon" href="/tereseBlog/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/tereseBlog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/tereseBlog/">Terese&#039;s site</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/tereseBlog/">Home</a><a class="navbar-item" href="/tereseBlog/archives">Archives</a><a class="navbar-item" href="/tereseBlog/categories">Categories</a><a class="navbar-item" href="/tereseBlog/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/tereseBlog/img/post-5.jpg" alt="【读书总结】《谁说菜鸟不会数据分析》1-4章"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-01-16T17:17:19.000Z" title="2020/1/17 01:17:19">2020-01-17</time>发表</span><span class="level-item"> terese </span><span class="level-item"><a class="link-muted" href="/tereseBlog/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="level-item">23 分钟读完 (大约3455个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">【读书总结】《谁说菜鸟不会数据分析》1-4章</h1><div class="content"><h1 id="第一章-数据分析那些事儿"><a href="#第一章-数据分析那些事儿" class="headerlink" title="第一章 数据分析那些事儿"></a>第一章 数据分析那些事儿</h1><span id="more"></span>
+<h2 id="1、数据分析是什么"><a href="#1、数据分析是什么" class="headerlink" title="1、数据分析是什么"></a>1、数据分析是什么</h2><p>数据分析是为了提取有用信息和形成结论而对数据加以详细研究和概括总结的过程。</p>
+<h2 id="2、数据分析六部曲-P17"><a href="#2、数据分析六部曲-P17" class="headerlink" title="2、数据分析六部曲 P17"></a>2、数据分析六部曲 P17</h2><h3 id="a-明确分析思路和目的"><a href="#a-明确分析思路和目的" class="headerlink" title="a. 明确分析思路和目的"></a>a. 明确分析思路和目的</h3><p><img src="https://img-blog.csdnimg.cn/2020022315192056.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使数据体系结构化</p>
+<p>以营销、管理等理论为指导，结合实际业务情况，搭建分析框架，这样才能确保数据分析维度的完整性，分析结果的有效性及准确性。</p>
+<h3 id="b-收集数据-P20"><a href="#b-收集数据-P20" class="headerlink" title="b. 收集数据 P20"></a>b. 收集数据 P20</h3><p>收集常用数据资源网站，数据库、互联网、公开出版物、市场调查</p>
+<h3 id="c-处理数据"><a href="#c-处理数据" class="headerlink" title="c. 处理数据"></a>c. 处理数据</h3><p>数据清洗、数据转化、数据提取、数据计算</p>
+<p>这里涉及数据清洗基本功</p>
+<h3 id="d-分析数据"><a href="#d-分析数据" class="headerlink" title="d. 分析数据"></a>d. 分析数据</h3><p>数据分析是指利用适当的分析方法和工具，对处理的数据进行分析，提取有价值对信息，形成有效结论的过程</p>
+<p>这里涉及数据分析工具的使用及数据分析方法，如果涉及数据挖掘，还需了解算法</p>
+<p>基本分析方法有：对比分析法、分组分析法、交叉分析法、结构分析法、漏斗图分析法、综合评价分析法、因素分析法、矩阵关联分析法等</p>
+<p>高级等分析方法：相关分析法、回归分析法、聚类分析法、判别分析法、主成分分析法、因子分析法、对应分析法、时间序列等。</p>
+<h3 id="e-数据展现"><a href="#e-数据展现" class="headerlink" title="e. 数据展现"></a>e. 数据展现</h3><p>涉及数据可视化基本功</p>
+<h3 id="f-撰写报告"><a href="#f-撰写报告" class="headerlink" title="f. 撰写报告"></a>f. 撰写报告</h3><p>对整个数据分析过程的总结和呈现。通过报告，把数据分析起因、过程、结果及建议完整地呈现出来，供决策者参考。</p>
+<p>需要明确结论，建议，图文并茂</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022021530631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3、数据分析师的职业要求"><a href="#3、数据分析师的职业要求" class="headerlink" title="3、数据分析师的职业要求"></a>3、数据分析师的职业要求</h2><p>懂业务、懂管理、懂分析、懂工具、懂设计</p>
+<h2 id="4、常用的指标和术语-P32"><a href="#4、常用的指标和术语-P32" class="headerlink" title="4、常用的指标和术语 P32"></a>4、常用的指标和术语 P32</h2><p>各种平均数（算数平均数、加权平均数、几何平均数、调和平均数）、绝对数和相对数、百分比和百分点、频数和频率、环比和同比、倍数和番数、百分比和百分点、</p>
+<p>百分点是不同时期以百分数的形式表示的相对指标的变动幅度，比如今年比去年上涨了17个百分点</p>
+<p>比例是部分比整体，比率是部分比部分</p>
+<h2 id="5、小结"><a href="#5、小结" class="headerlink" title="5、小结"></a>5、小结</h2><p>数据分析三字经</p>
+<p><img src="https://img-blog.csdnimg.cn/20200220223401662.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="第二章-结构为王——确定分析思路"><a href="#第二章-结构为王——确定分析思路" class="headerlink" title="第二章 结构为王——确定分析思路"></a>第二章 结构为王——确定分析思路</h1><p>在正确的分析方法论下开展分析。</p>
+<p>数据分析方法论主要用来指导数据分析师进行一个完整的数据分析，它更多的是指数据分析思路。</p>
+<h2 id="1、常用的数据分析方法论-P40"><a href="#1、常用的数据分析方法论-P40" class="headerlink" title="1、常用的数据分析方法论 P40"></a>1、常用的数据分析方法论 P40</h2><p><img src="https://img-blog.csdnimg.cn/20200222171539347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="a-PEST分析法"><a href="#a-PEST分析法" class="headerlink" title="a. PEST分析法"></a>a. PEST分析法</h3><p><img src="https://img-blog.csdnimg.cn/20200222152820954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200222152756211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-5W2H分析法"><a href="#b-5W2H分析法" class="headerlink" title="b. 5W2H分析法"></a>b. 5W2H分析法</h3><p>5W2H分析法是从回答中发现解决问题的线索的方法，即何因（why）、何事（what）、何人（who）、何时（when）、何地（where）、如何做（how）、何价（how much），这就构成了5W2H的总框架。该方法简单方便，容易理解，广泛应用于企业营销管理活动等方面。比如用户行为分析、业务专题分析。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022216063710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>eg:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222160729296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-逻辑树分析法"><a href="#c-逻辑树分析法" class="headerlink" title="c. 逻辑树分析法"></a>c. 逻辑树分析法</h3><p>逻辑树分析法是将一个已知问题当成树干，然后考虑这个问题和哪些问题有关。每想到一点，就给这个问题所在的树干加一个树枝，并标明树枝代表什么问题。逻辑树方法又称问题树、演绎树或分解树。可用于业务问题专题分析。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222152115369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>逻辑树的适用要遵循以下原则：</p>
+<p>要素化：把相同问题归纳总结成要素</p>
+<p>框架化：将各个要素组成框架，遵守 不重不漏的原则</p>
+<p>关联化：框架内的各元素保持必要的相互关系，简单不孤立</p>
+<p>eg.逻辑树分析法在利润分析中的应用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222160928205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="c-4P营销理论"><a href="#c-4P营销理论" class="headerlink" title="c. 4P营销理论"></a>c. 4P营销理论</h3><p>4P营销理论产生于20世纪60年代的美国，它随着营销组合理论的提出而出现。它将营销要素概括为四类：产品（product）、价格（price）、渠道（place）、促销（promotion）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222160337142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200222160437598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-用户行为理论"><a href="#d-用户行为理论" class="headerlink" title="d. 用户行为理论"></a>d. 用户行为理论</h3><p>用户使用行为是指用户为获取、使用物品或服务所采用的各种行动，一般按照以下过程：对产品有一个认知、熟悉的过程，然后试用，再决定是否继续消费使用，最后成为忠实用户。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020022216113362.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>eg:用户使用理论在网站分析中的应用</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222161325961.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="第三章-数据准备"><a href="#第三章-数据准备" class="headerlink" title="第三章 数据准备"></a>第三章 数据准备</h1><h2 id="1、理解数据"><a href="#1、理解数据" class="headerlink" title="1、理解数据"></a>1、理解数据</h2><h2 id="2、数据来源"><a href="#2、数据来源" class="headerlink" title="2、数据来源"></a>2、数据来源</h2><p>对数据表的要求：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222165916679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>如何将二维表转换为一维表？</p>
+<p>导入各种数据？</p>
+<p>问卷录入要求？不同题型录入方法？</p>
+<p>多选题的录入方法：二分法和多重分类法。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222171639622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200222171740567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="第四章-数据处理"><a href="#第四章-数据处理" class="headerlink" title="第四章 数据处理"></a>第四章 数据处理</h1><h2 id="1、何为数据处理"><a href="#1、何为数据处理" class="headerlink" title="1、何为数据处理"></a>1、何为数据处理</h2><h3 id="a-“三心二意”处理数据"><a href="#a-“三心二意”处理数据" class="headerlink" title="a. “三心二意”处理数据"></a>a. “三心二意”处理数据</h3><p><img src="https://img-blog.csdnimg.cn/20200222172419923.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-数据处理的内容"><a href="#b-数据处理的内容" class="headerlink" title="b. 数据处理的内容"></a>b. 数据处理的内容</h3><p>第一步，数据清洗，将重复的数据筛选清除，将缺失的数据补充完整，将错误的数据纠正或删除。</p>
+<p>第二部，数据加工。提取我们想要的信息，需要对字段进行信息提取、计算、分组、转换等加工</p>
+<p>常见数据错误识别：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222174739429.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2、数据清洗"><a href="#2、数据清洗" class="headerlink" title="2、数据清洗"></a>2、数据清洗</h2><p>清除数据包括：清除重复数据、填充缺失数据、处理错误数据</p>
+<h3 id="a-重复数据处理"><a href="#a-重复数据处理" class="headerlink" title="a. 重复数据处理"></a>a. 重复数据处理</h3><ul>
+<li>使用COUNTIF函数</li>
+</ul>
+<p>重复次数COUNTIF(A:A,A2)</p>
+<p>第几次出现COUNTIF(A$2:A2,A2)</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222182742866.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<blockquote>
+<p>excel绝对引用、相对引用和混合引用的区别？</p>
+<p>相对引用，填充的公式里的行号和列号会随着单元格的改变而改变，这就是相对引用。</p>
+<p>绝对引用，加$的行或列号不变，快捷键F4帮助用户迅速切换相对引用、绝对引用和混合引用</p>
+<p>$A1在行号前面加了一个$符号，行号就固定不变了<br>A$1 在列号前面加了 美元符号，列号就固定不变了。</p>
+</blockquote>
+<ul>
+<li><p>使用条件格式</p>
+<p>“开始”→“条件格式”→“突出显示单元格规格”→“重复值”</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200222230548631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>用菜单操作来筛选，“数据”→“排序与筛选”→ 高级</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200222230932936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-缺失值处理"><a href="#b-缺失值处理" class="headerlink" title="b. 缺失值处理"></a>b. 缺失值处理</h3><ul>
+<li>定位输入</li>
+</ul>
+<p>开始-编辑-定位条件-空值</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222231535735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>处理缺失值</li>
+</ul>
+<p>方法一：样本平均值代替缺失值</p>
+<p>方法二：用统计模型计算出来的值去代替缺失值，常使用的模型有：回归模型、判别模型等，这需要专业的数据分析软件</p>
+<p>方法三：将缺失值删除</p>
+<p>方法四：将缺失值保留，仅在相应的分析中做必要的排除。当调查的样本量比较大，缺失值的数量又不是很多，且变量之间也不存在高度相关的情况下，采用这种方法处理比较可行。</p>
+<ul>
+<li>control+enter一次性填充缺失值</li>
+</ul>
+<p>先control选中全部缺失值，在最后一个选中单元格输入内容，按control+enter一次性填充。</p>
+<ul>
+<li>查找替换</li>
+</ul>
+<p>当缺失值是以错误标识符出现时可以使用查找替换处理</p>
+<h3 id="c-检查数据逻辑错误"><a href="#c-检查数据逻辑错误" class="headerlink" title="c. 检查数据逻辑错误"></a>c. 检查数据逻辑错误</h3><p>具体情况具体分析，可以利用IF、OR、AND函数检查或标记错误</p>
+<p>比如，问卷题目为多选题限选3项，且为二分法。</p>
+<p>IF(COUNTIF(B2:G2,”&lt;&gt;0”)&gt;3,”false”,”true”)</p>
+<p><img src="https://img-blog.csdnimg.cn/20200223151437368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="3、数据加工-P82"><a href="#3、数据加工-P82" class="headerlink" title="3、数据加工 P82"></a>3、数据加工 P82</h2><p>四大数据加工技巧</p>
+<h3 id="a-数据抽取"><a href="#a-数据抽取" class="headerlink" title="a. 数据抽取"></a>a. 数据抽取</h3><p>数据抽取是指保留原数据表中某些字段的部分信息，组成一个新字段。</p>
+<ul>
+<li>字段分列</li>
+</ul>
+<p>函数法：常用函数LEFT，RIGHT</p>
+<ul>
+<li>字段合并</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200223152542230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="b-数据计算"><a href="#b-数据计算" class="headerlink" title="b. 数据计算"></a>b. 数据计算</h3><ul>
+<li>简单计算</li>
+<li>函数计算</li>
+</ul>
+<p>AVERAGE,AUM,MAX,MIN函数</p>
+<ul>
+<li>日期计算</li>
+</ul>
+<p>DATE,YEAR,MONTH,DAY,DATEIF函数</p>
+<h3 id="c-数据分组"><a href="#c-数据分组" class="headerlink" title="c. 数据分组"></a>c. 数据分组</h3><p><img src="https://img-blog.csdnimg.cn/20200223152856336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzQxOTQyOTg4,size_16,color_FFFFFF,t_70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="d-数据转换"><a href="#d-数据转换" class="headerlink" title="d. 数据转换"></a>d. 数据转换</h3><p>HLOOKUP函数、SEARCH函数</p>
+<h2 id="4、数据抽样"><a href="#4、数据抽样" class="headerlink" title="4、数据抽样"></a>4、数据抽样</h2><p>RAND()函数进行随机抽样,RAND()生成0-1间的随机数</p>
+<p>表示a—b间的随机数，RAND()*(b-a)+a;表示60-70的数，INT(RAND()*10+60)</p>
+<p>参考资料：</p>
+<p>《谁说菜鸟不会数据分析》（入门篇）</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>【读书总结】《谁说菜鸟不会数据分析》1-4章</p><p><a href="https://teresesong.github.io/tereseBlog/2020/01/17/2020-01-17-【读书总结】《谁说菜鸟不会数据分析》1-4章/">https://teresesong.github.io/tereseBlog/2020/01/17/2020-01-17-【读书总结】《谁说菜鸟不会数据分析》1-4章/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>terese</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-01-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-10-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/tereseBlog/" alt="支付宝"></span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/tereseBlog/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/tereseBlog/2020/01/23/2020-01-23-%E3%80%90%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93%E3%80%91%E3%80%8A%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E3%80%8B5-8%E7%AB%A0/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">【读书总结】《谁说菜鸟不会数据分析》5-8章</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/tereseBlog/2020/01/12/2019-01-12-%E3%80%90%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E3%80%91%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%9B%BE%E8%A1%A8%EF%BC%9F/"><span class="level-item">【数据可视化】如何选择图表？</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#第一章-数据分析那些事儿"><span class="level-left"><span class="level-item">1</span><span class="level-item">第一章 数据分析那些事儿</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、数据分析是什么"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">1、数据分析是什么</span></span></a></li><li><a class="level is-mobile" href="#2、数据分析六部曲-P17"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">2、数据分析六部曲 P17</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-明确分析思路和目的"><span class="level-left"><span class="level-item">1.2.1</span><span class="level-item">a. 明确分析思路和目的</span></span></a></li><li><a class="level is-mobile" href="#b-收集数据-P20"><span class="level-left"><span class="level-item">1.2.2</span><span class="level-item">b. 收集数据 P20</span></span></a></li><li><a class="level is-mobile" href="#c-处理数据"><span class="level-left"><span class="level-item">1.2.3</span><span class="level-item">c. 处理数据</span></span></a></li><li><a class="level is-mobile" href="#d-分析数据"><span class="level-left"><span class="level-item">1.2.4</span><span class="level-item">d. 分析数据</span></span></a></li><li><a class="level is-mobile" href="#e-数据展现"><span class="level-left"><span class="level-item">1.2.5</span><span class="level-item">e. 数据展现</span></span></a></li><li><a class="level is-mobile" href="#f-撰写报告"><span class="level-left"><span class="level-item">1.2.6</span><span class="level-item">f. 撰写报告</span></span></a></li></ul></li><li><a class="level is-mobile" href="#3、数据分析师的职业要求"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">3、数据分析师的职业要求</span></span></a></li><li><a class="level is-mobile" href="#4、常用的指标和术语-P32"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">4、常用的指标和术语 P32</span></span></a></li><li><a class="level is-mobile" href="#5、小结"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">5、小结</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第二章-结构为王——确定分析思路"><span class="level-left"><span class="level-item">2</span><span class="level-item">第二章 结构为王——确定分析思路</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、常用的数据分析方法论-P40"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">1、常用的数据分析方法论 P40</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-PEST分析法"><span class="level-left"><span class="level-item">2.1.1</span><span class="level-item">a. PEST分析法</span></span></a></li><li><a class="level is-mobile" href="#b-5W2H分析法"><span class="level-left"><span class="level-item">2.1.2</span><span class="level-item">b. 5W2H分析法</span></span></a></li><li><a class="level is-mobile" href="#c-逻辑树分析法"><span class="level-left"><span class="level-item">2.1.3</span><span class="level-item">c. 逻辑树分析法</span></span></a></li><li><a class="level is-mobile" href="#c-4P营销理论"><span class="level-left"><span class="level-item">2.1.4</span><span class="level-item">c. 4P营销理论</span></span></a></li><li><a class="level is-mobile" href="#d-用户行为理论"><span class="level-left"><span class="level-item">2.1.5</span><span class="level-item">d. 用户行为理论</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="#第三章-数据准备"><span class="level-left"><span class="level-item">3</span><span class="level-item">第三章 数据准备</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、理解数据"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">1、理解数据</span></span></a></li><li><a class="level is-mobile" href="#2、数据来源"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">2、数据来源</span></span></a></li></ul></li><li><a class="level is-mobile" href="#第四章-数据处理"><span class="level-left"><span class="level-item">4</span><span class="level-item">第四章 数据处理</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、何为数据处理"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">1、何为数据处理</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-“三心二意”处理数据"><span class="level-left"><span class="level-item">4.1.1</span><span class="level-item">a. “三心二意”处理数据</span></span></a></li><li><a class="level is-mobile" href="#b-数据处理的内容"><span class="level-left"><span class="level-item">4.1.2</span><span class="level-item">b. 数据处理的内容</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、数据清洗"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">2、数据清洗</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-重复数据处理"><span class="level-left"><span class="level-item">4.2.1</span><span class="level-item">a. 重复数据处理</span></span></a></li><li><a class="level is-mobile" href="#b-缺失值处理"><span class="level-left"><span class="level-item">4.2.2</span><span class="level-item">b. 缺失值处理</span></span></a></li><li><a class="level is-mobile" href="#c-检查数据逻辑错误"><span class="level-left"><span class="level-item">4.2.3</span><span class="level-item">c. 检查数据逻辑错误</span></span></a></li></ul></li><li><a class="level is-mobile" href="#3、数据加工-P82"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">3、数据加工 P82</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#a-数据抽取"><span class="level-left"><span class="level-item">4.3.1</span><span class="level-item">a. 数据抽取</span></span></a></li><li><a class="level is-mobile" href="#b-数据计算"><span class="level-left"><span class="level-item">4.3.2</span><span class="level-item">b. 数据计算</span></span></a></li><li><a class="level is-mobile" href="#c-数据分组"><span class="level-left"><span class="level-item">4.3.3</span><span class="level-item">c. 数据分组</span></span></a></li><li><a class="level is-mobile" href="#d-数据转换"><span class="level-left"><span class="level-item">4.3.4</span><span class="level-item">d. 数据转换</span></span></a></li></ul></li><li><a class="level is-mobile" href="#4、数据抽样"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">4、数据抽样</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/tereseBlog/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/"><span class="tag">实践</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/"><span class="tag">实践总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="tag">问题解决</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/tereseBlog/">Terese&#039;s site</a><p class="is-size-7"><span>&copy; 2022 terese</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/tereseBlog/js/column.js"></script><script src="/tereseBlog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/tereseBlog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/tereseBlog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/tereseBlog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/tereseBlog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

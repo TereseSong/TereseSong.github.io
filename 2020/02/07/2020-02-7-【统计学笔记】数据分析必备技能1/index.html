@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>【统计学笔记】数据分析必备技能1 - Terese&#039;s Blog</title><link rel="manifest" href="/tereseBlog/manifest.json"><meta name="application-name" content="Terese&#039;s Blog"><meta name="msapplication-TileImage" content="/img/avatar.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Terese&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="一、为什么要学习统计学"><meta property="og:type" content="blog"><meta property="og:title" content="【统计学笔记】数据分析必备技能1"><meta property="og:url" content="https://teresesong.github.io/tereseBlog/2020/02/07/2020-02-7-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD1/"><meta property="og:site_name" content="Terese&#039;s Blog"><meta property="og:description" content="一、为什么要学习统计学"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://teresesong.github.io/tereseBlog/img/post-11.jpg"><meta property="article:published_time" content="2020-02-06T17:04:56.000Z"><meta property="article:modified_time" content="2022-10-05T10:28:11.829Z"><meta property="article:author" content="terese"><meta property="article:tag" content="笔记"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://teresesong.github.io/tereseBlog/img/post-11.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://teresesong.github.io/tereseBlog/2020/02/07/2020-02-7-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD1/"},"headline":"【统计学笔记】数据分析必备技能1","image":["https://teresesong.github.io/tereseBlog/img/post-11.jpg"],"datePublished":"2020-02-06T17:04:56.000Z","dateModified":"2022-10-05T10:28:11.829Z","author":{"@type":"Person","name":"terese"},"publisher":{"@type":"Organization","name":"Terese's Blog","logo":{"@type":"ImageObject","url":{"text":"Terese's site"}}},"description":"一、为什么要学习统计学"}</script><link rel="canonical" href="https://teresesong.github.io/tereseBlog/2020/02/07/2020-02-7-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD1/"><link rel="icon" href="/tereseBlog/img/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/tereseBlog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/tereseBlog/">Terese&#039;s site</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/tereseBlog/">Home</a><a class="navbar-item" href="/tereseBlog/archives">Archives</a><a class="navbar-item" href="/tereseBlog/categories">Categories</a><a class="navbar-item" href="/tereseBlog/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="/tereseBlog/img/post-11.jpg" alt="【统计学笔记】数据分析必备技能1"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-02-06T17:04:56.000Z" title="2020/2/7 01:04:56">2020-02-07</time>发表</span><span class="level-item"> terese </span><span class="level-item"><a class="link-muted" href="/tereseBlog/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a></span><span class="level-item">29 分钟读完 (大约4284个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">【统计学笔记】数据分析必备技能1</h1><div class="content"><h1 id="一、为什么要学习统计学"><a href="#一、为什么要学习统计学" class="headerlink" title="一、为什么要学习统计学"></a>一、为什么要学习统计学</h1><span id="more"></span>
+<ol>
+<li><p>存在图表玄机问题，在横向和纵向以及坐标轴上动手脚能够忽悠人</p>
+</li>
+<li><p>学习统计学，让我们理清思路，学会分析事物之间各种各样的关系，</p>
+</li>
+</ol>
+<p>例如A越多，B越多，这样的句子能说明A和B的相关性，不能说明因果关系，但因果关系一定是相关关系</p>
+<blockquote>
+<p>🌰尼古拉斯凯奇在电影里出现的次数和淹死在游泳池里的人数相关性</p>
+<p>全美滑雪场的总收入与被被单缠死的人数的相关性</p>
+<p>所以两件事的相关性很强，同时放在一起有意义，才能被我们利用</p>
+<p>所以学习统计学，让我们理清思路，学会分析事物之间各种各样的关系</p>
+</blockquote>
+<ol start="3">
+<li>打破权威</li>
+</ol>
+<p>常见的如何分辨数据的真假方法？</p>
+<ul>
+<li>谁说的？</li>
+<li>数据从哪里来的？</li>
+<li>数据有遗漏吗？</li>
+<li>是否有人偷换了概念？</li>
+<li>数据有意义吗？</li>
+</ul>
+<ol start="4">
+<li>数据分析</li>
+</ol>
+<p>学习统计，揭示数据后的真实含义，找到真相</p>
+<h1 id="二、统计小百科"><a href="#二、统计小百科" class="headerlink" title="二、统计小百科"></a>二、统计小百科</h1><h2 id="1-概率和机会"><a href="#1-概率和机会" class="headerlink" title="1. 概率和机会"></a>1. 概率和机会</h2><blockquote>
+<p>概率：描述某件事情出现的可能性的大小；<br>概率与机会的关系：概率描述了某件事情发生的机会的多少，0-1之间；<br>条件概率：在某种条件或者信息下对事件发生的可能性大小称为条件概率；<br>相关事件：如果几个事件互相有影响，则为相关事件，即一件事件的发生与否会影响另一件事件的发生概率；<br>独立事件：如果几个事件互不影响，则为独立事件，即无论其他事件发生与否，某个事件的发生概率保持不变<br>互斥事件：事件A和事件B不可能同时发生，互斥事件即AB同时发生的概率为0，即P(AB)&#x3D;0；</p>
+</blockquote>
+<h2 id="2-统计是什么"><a href="#2-统计是什么" class="headerlink" title="2. 统计是什么"></a>2. 统计是什么</h2><blockquote>
+<p>统计是一门收集数据，处理和分析数据，解释数据并从数据中得出结论的科学</p>
+<p>统计方法分为描述统计和推断统计</p>
+<p>描述统计研究的是数据收集、处理、汇总、图表描述、概括与分析等统计方法，目的是为了描述数据特征，找到数据的基本规律</p>
+<p>比如，df.describe()得出的结果</p>
+<p>什么是推断统计？参数估计+假设检验</p>
+<p>推断统计是如何利用样本数据来推断总体特征的方法</p>
+<p>参数估计：利用样本信息估计总体特征，比如从样本均值估计总体均值</p>
+<p>假设检验：利用样本信息判断对总体的假设是否成立，比如小概率事件，比如反证法</p>
+</blockquote>
+<h2 id="3-变量和常量"><a href="#3-变量和常量" class="headerlink" title="3.变量和常量"></a>3.变量和常量</h2><p>变量与常量：都是统计学研究的对象特征，在数量指标中，不变的数量指标称为常量或参数，可变的数量指标称为变量。</p>
+<blockquote>
+<ul>
+<li>按变量值是否连续：</li>
+</ul>
+<p>分为连续变量和离散变量。离散变量指数值只能用自然数或整数单位计，如人数等；连续变量指在一定区间内可以任意取值的变量，其数值是连续不断的，如身高，血压，体重等。</p>
+<p>区分：连续变量是一直叠加上去的，是逐渐增长的，增长量可以划分为固定的单位，即1,2,3…;离散变量是对所有统计对象的计数，增长量是非固定的，不是逐渐增长的。</p>
+<ul>
+<li>按变量值是否能量化：</li>
+</ul>
+<p>分为定性变量与定量变量。可以由数字量化的变量就是定量变量，无法用数字表示的变量就是定性变量，如性别，观点等。</p>
+</blockquote>
+<h2 id="4-数据有几种类型"><a href="#4-数据有几种类型" class="headerlink" title="4.数据有几种类型"></a>4.数据有几种类型</h2><p>按不同类型分类</p>
+<blockquote>
+<ul>
+<li>按计量层次：分为数值型（如成绩100分），分类型（如性别分男女），顺序型（如等级分一等、二等、三等）</li>
+</ul>
+<p>注意，不同类型数据可以相互转化的</p>
+<ul>
+<li>按时间状况：分为截面数据和时序数据。</li>
+</ul>
+<p>截面数据指在同一时间，由不同统计单位和相同统计指标组成的一组数据，例如股票数据。不要求统计对象及其范围相同，但要求统计时间相同。<br>时序数据是在不同时间点上收集到的数据，该类数据反映的是某一现象等随时间的变化状态或程度。如每天气温</p>
+</blockquote>
+<h2 id="5、易混淆的统计术语"><a href="#5、易混淆的统计术语" class="headerlink" title="5、易混淆的统计术语"></a>5、易混淆的统计术语</h2><blockquote>
+<ul>
+<li>绝对数与相对数</li>
+</ul>
+<p>绝对数：反映客观现象总体在一定时间、地点条件下的总规模、总水平的综合性指标<br>相对数：指由两个有联系的指标对比计算而得到的数值</p>
+<ul>
+<li>频数与频率</li>
+</ul>
+<p>频数：一组数据中个别数据重复出现的次数（绝对数）<br>频率：每个小组的频数与数据总和的比值，它代表的是某组在总体中出现的频繁程度（百分数表示，是相对数）</p>
+<ul>
+<li>百分比与百分点</li>
+</ul>
+<p>百分比：表示一个数是另一个数的百分之几，也称百分率或百分数，通常采用%表示，属于相对数<br>百分点：指以百分数的形式表示的相对指标的变动幅度，比如增长几个百分点</p>
+<ul>
+<li>比例与比率</li>
+</ul>
+<p>比例：指在总体中，各部分数值占全部数值的比重，它反映的是总体的构成和结构<br>比率：是不同类别数值的对比，它反映的是一个整体中各部分之间的关系<br>总结，比例指部分占总体的比重，比率指各部分之间的对比</p>
+<ul>
+<li>倍数与番数</li>
+</ul>
+<p>倍数：一个数除以另一个数所得的商<br>番数：指原来数量的2的N次方，即翻一番 等于 原来的2倍，翻两番 等于 原来的4倍</p>
+<ul>
+<li>同比与环比</li>
+</ul>
+<p>同比：目的是为了与历史同时期进行比较，该指标主要反映的是事物发展的相对情况。比如2019年1月与2018年1月对比。<br>环比：目的是为了与前一个统计时期进行比较得到的数值，该指标主要反映的是事物逐期发展的情况，比如2019年2月与2019年1月对比。</p>
+</blockquote>
+<h1 id="三、数据抽样"><a href="#三、数据抽样" class="headerlink" title="三、数据抽样"></a>三、数据抽样</h1><p>　　1、数据的收集和整理</p>
+<p>　　2、收集数据时的误差</p>
+<p>　　3、常用的抽样方法</p>
+<p>　　4、设计调查问卷的原则</p>
+<h1 id="四、图表的使用"><a href="#四、图表的使用" class="headerlink" title="四、图表的使用"></a>四、图表的使用</h1><h2 id="1、如何选择合适的图表"><a href="#1、如何选择合适的图表" class="headerlink" title="1、如何选择合适的图表"></a>1、如何选择合适的图表</h2><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ZpbGVzLmMuZXhjZWxob21lLm5ldC9mb3J1bS8yMDE4MDIvMjUvMTYxNTU0Zm9sNG5pbDhmOHJmbjQzMy5wbmc?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ZpbGVzLmMuZXhjZWxob21lLm5ldC9mb3J1bS8yMDE4MDIvMjUvMTYxNjAyZmEyczlkZjdxOTlkeXJkOC5wbmc?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="1-展示比较"><a href="#1-展示比较" class="headerlink" title="1. 展示比较"></a>1. 展示比较</h3><p>展示比较，包括基于分类的比较和基于时间的比较。</p>
+<p>基于分类的比较：横轴一般是各个分类</p>
+<ul>
+<li>不等宽柱形图（常见外企报表）：多个项目，两个维度</li>
+</ul>
+<p>​      图表必杀技：一个简洁的Excel不等宽柱形图制作技巧<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ba9fd549be9a">https://www.jianshu.com/p/ba9fd549be9a</a></p>
+<p>​      默认情况下，柱形图 柱体的宽度是相同的，但调成不等宽，高度和宽度都有意义了</p>
+<p>​      因为宽度不一致，所以不等宽柱形图具有普通柱形图没有的优势：那就是<strong>一张图可以展现两个维度但内容</strong>，提供了一种展示       数据新的角度</p>
+<p>eg：适用于多个项目或主体在两个维度上（营业额和增长率）比较数据，提供了一种展示数据的新的角度。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217110722870.png" alt="每个项目有两个变量，营业额和增长率"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>条形图：多个项目，少数分类</li>
+</ul>
+<p>eg：适用于多个项目（各个品牌）少数分类（线上线下）基于变量（客单价）的比较。</p>
+<ul>
+<li>柱形图：少数项目，少数分类</li>
+</ul>
+<p>eg ：适用于少数分类（线上线下）少数项目（各品牌），基于变量（件单价）的比较。</p>
+<p>基于时间的比较：横轴一般为各个时间点</p>
+<ul>
+<li>雷达图</li>
+</ul>
+<p>适用于展示多个项目（各个网站）的某个变量，基于某个周期（各月份）内的比较。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217111646814.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>曲线图</li>
+</ul>
+<p>适用于展示多个项目（各类目）的某个变量（市场份额）基于少数周期（各月份）的比较。</p>
+<ul>
+<li>散点图</li>
+</ul>
+<p>适用于展示某两个变量（业务收入和广告支出）之间的联系。</p>
+<ul>
+<li>气泡图</li>
+</ul>
+<p>适用于展示三个变量（上新款数，单款库存深度和总库存件数）之间的联系。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217114358279.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="2-展示分布"><a href="#2-展示分布" class="headerlink" title="2. 展示分布"></a>2. 展示分布</h3><p>展示分布包括展示单变量的分布，多变量的分布等。</p>
+<ul>
+<li>直方图</li>
+</ul>
+<p>适用于展示单个变量（学生分数）的少数数据分布。</p>
+<ul>
+<li>正态分布图</li>
+</ul>
+<p>适用于展示单个变量（评分）的多个数据点分布。</p>
+<ul>
+<li>散点图</li>
+</ul>
+<p>适用于展示某2个变量（顾客满意度与浏览时间）的数据点的分布。</p>
+<ul>
+<li>曲面图</li>
+</ul>
+<p>适用于展示某3个变量（x,y,z）的数据点的分布。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217115519516.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>热力图</li>
+</ul>
+<p><strong>热图的重要用处就是展现不同指标、不同样本等之间的相关性</strong>。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy84NjM3MDY2LTRhMWEyYTM1ODE1ZDA0YzQucG5n?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/363bbf6ec335">Python可视化：Seaborn库热力图使用进阶</a></p>
+<h3 id="3-展示构成"><a href="#3-展示构成" class="headerlink" title="3. 展示构成"></a>3. 展示构成</h3><p>展示构成包括展示随时间变化的构成和静态构成。</p>
+<p>1.随时间变化的构成</p>
+<ul>
+<li>堆积百分比柱形图</li>
+</ul>
+<p>适用于展示各个项目（各类目）随时间变化的百分比（销售占比）结构。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217115850759.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>堆积柱形图</li>
+</ul>
+<p>适用于展示各个项目（各类目）随着时间变化的销售结构。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217143309179.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>堆积百分比面积图</li>
+</ul>
+<p>适用于展示各个项目（各类目）随时间变化的百分比（销售占比）结构。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217143720254.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>堆积面积图</li>
+</ul>
+<p>适用于展示各个项目（各类目）随时间变化的销售结构。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217143932554.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"><br>堆积百分比面积图相比较于堆积百分比柱形图更适用于展示多周期的构成。堆积百分比面积图与堆积面积图的区别在于堆积百分比面积图体现的是相对差异，堆积面积图体现的是绝对差异。</p>
+<h3 id="4-静态构成"><a href="#4-静态构成" class="headerlink" title="4. 静态构成"></a>4. 静态构成</h3><ul>
+<li>饼图</li>
+</ul>
+<p>适用于展示各个项目（三明治销售额等）占总体（午餐销售额）的比例</p>
+<ul>
+<li>瀑布图</li>
+</ul>
+<p>适用于直观的展示各个项目（各种费用和各种税务等）占总体（年收入）的构成。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217144826979.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<ul>
+<li>复合堆积百分比柱形图</li>
+</ul>
+<p>适用于展示某个项目构成（总销量）的构成（奶制品的销量）</p>
+<p><img src="https://img-blog.csdnimg.cn/20190217145003694.png" alt="在这里插入图片描述"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2、有效图表的几个基本要素"><a href="#2、有效图表的几个基本要素" class="headerlink" title="2、有效图表的几个基本要素"></a>2、有效图表的几个基本要素</h2><p>第一，坐标轴必须标记<br>第二，标题要提炼出重点<br>第三，备注数据来源，保证可信度<br>第四，同比数据的解读很重要<br>同比数据解读：首先同比数据的对比最好转化为每单位净增长数据，比如某个网点的平均增加比，单店比，同店同比更有意义。其次同比增长高，不一定是值得庆贺的，也可能是因为去年表现太差，导致同比增幅大，所以，对比的基数也很重要。</p>
+<h2 id="3、增强图表表达力的几种方法"><a href="#3、增强图表表达力的几种方法" class="headerlink" title="3、增强图表表达力的几种方法"></a>3、增强图表表达力的几种方法</h2><p>常见的做法有以下几种：</p>
+<ul>
+<li>改造饼图</li>
+</ul>
+<blockquote>
+<p>使用创意图例联系主题，赋予创意</p>
+</blockquote>
+<ul>
+<li>改造柱形图或条形图</li>
+</ul>
+<blockquote>
+<p>经常用小汽车、小房子、小树、小人、银币等图片替换</p>
+<p>最好使用透明的矢量图</p>
+</blockquote>
+<ul>
+<li>改造面积图</li>
+</ul>
+<blockquote>
+<p>常见的有钞票、黄金、油枪、国旗等</p>
+<p>填充曲线图下的面积图</p>
+</blockquote>
+<ul>
+<li>使用logo等形象化图表对象</li>
+</ul>
+<blockquote>
+<p>比如使用公司logo、国旗来表示分类标签</p>
+</blockquote>
+<ul>
+<li>用地图来加强图表</li>
+<li>合理的图表修饰</li>
+</ul>
+<blockquote>
+<p>创意活泼的方式修饰图表</p>
+</blockquote>
+<ul>
+<li>变换百分比的表现形式</li>
+</ul>
+<h2 id="4、可视化图表的几个注意事项"><a href="#4、可视化图表的几个注意事项" class="headerlink" title="4、可视化图表的几个注意事项"></a>4、可视化图表的几个注意事项</h2><p>使用图片加强图表时，需注意：</p>
+<p>不要使用office自带的或者其他劣质的剪贴画，使用高质量的图片</p>
+<p>所使用的图片与图表的主题有较好的相关性，寓意准确，恰当无异议</p>
+<p>图片的色彩要与图片协调，可以从图片中提取颜色来做图表</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57262819">数据可视化：如何用好数据可视化图表</a></p>
+<ul>
+<li>饼图的顺序要得当</li>
+<li>在折线尽量避免用虚线</li>
+<li>数据的罗列要尽可能的符合逻辑</li>
+</ul>
+<blockquote>
+<p>对类目按字母排序</p>
+</blockquote>
+<ul>
+<li>确保数据不会因为设计而丢失或者覆盖</li>
+</ul>
+<blockquote>
+<p>在面积图使用透明效果</p>
+</blockquote>
+<ul>
+<li>图表应尽力避免耗费读者过多的精力</li>
+</ul>
+<blockquote>
+<p>添加辅助的图形元素来使数据更易于理解，比如在散点图中增加趋势线</p>
+</blockquote>
+<ul>
+<li>确保图表的呈现要符合实际情况</li>
+</ul>
+<blockquote>
+<p>气泡的大小应该和数值一样</p>
+</blockquote>
+<ul>
+<li><p>在热图中尽力避免使用不同的颜色，可以使用单一颜色不同深浅</p>
+</li>
+<li><p>柱形图柱子之间的间距不宜过宽或者过窄，最好调整为宽的1&#x2F;2</p>
+</li>
+<li><p>数据的对比要直观的呈现差异</p>
+</li>
+<li><p>尽量避免使用三维图，2D为王道</p>
+</li>
+</ul>
+<h2 id="5、选对图表"><a href="#5、选对图表" class="headerlink" title="5、选对图表"></a>5、选对图表</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/57262819">数据可视化：如何用好数据可视化图表</a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/67106690">数据可视化图表，你选对了吗？</a></p>
+<p>《七天数据可视化之旅》木东居士<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUyMjI4MzE0MQ==&mid=2247484541&idx=1&sn=2433eaf3e23ce9d200cbf3dc5925b77d&chksm=f9cf7597ceb8fc81c76bc570f1cf4f5c263efb216f7a882af99f3c8db8e2ac7bcc54020abbed&scene=21#wechat_redirect">《七天数据可视化之旅》第一天 数据可视化过程</a></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9qQTF3TzhpY3cwZ0NicnF2NkY1a0l2WWVtQmtpYWg4UVg4Vm5FZWU0SlYxeWpoc2JXSDc5M2VpYmpkV3JQQXFQMDI1Q05VRkN4dEI4dVFZS2M3Q21zUHJIUS82NDA?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy9qQTF3TzhpY3cwZ0NicnF2NkY1a0l2WWVtQmtpYWg4UVg4dkpBZW1ySXZPR2lic1JkbjFSYmE1N1EzTzJXN1ZROGxkTW5LUGZUMk9zWHUxTkVQamZCaGw2Zy82NDA?x-oss-process=image/format,png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>　　</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>【统计学笔记】数据分析必备技能1</p><p><a href="https://teresesong.github.io/tereseBlog/2020/02/07/2020-02-7-【统计学笔记】数据分析必备技能1/">https://teresesong.github.io/tereseBlog/2020/02/07/2020-02-7-【统计学笔记】数据分析必备技能1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>terese</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2020-02-07</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-10-05</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/tereseBlog/" alt="支付宝"></span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/tereseBlog/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/tereseBlog/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/tereseBlog/2020/02/10/2020-02-10-%E3%80%90%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BF%85%E5%A4%87%E6%8A%80%E8%83%BD2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">【统计学笔记】数据分析必备技能2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/tereseBlog/2020/01/30/2020-01-30-SQL%E5%81%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/"><span class="level-item">SQL做数据分析流程</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#一、为什么要学习统计学"><span class="level-left"><span class="level-item">1</span><span class="level-item">一、为什么要学习统计学</span></span></a></li><li><a class="level is-mobile" href="#二、统计小百科"><span class="level-left"><span class="level-item">2</span><span class="level-item">二、统计小百科</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-概率和机会"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">1. 概率和机会</span></span></a></li><li><a class="level is-mobile" href="#2-统计是什么"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">2. 统计是什么</span></span></a></li><li><a class="level is-mobile" href="#3-变量和常量"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">3.变量和常量</span></span></a></li><li><a class="level is-mobile" href="#4-数据有几种类型"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">4.数据有几种类型</span></span></a></li><li><a class="level is-mobile" href="#5、易混淆的统计术语"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">5、易混淆的统计术语</span></span></a></li></ul></li><li><a class="level is-mobile" href="#三、数据抽样"><span class="level-left"><span class="level-item">3</span><span class="level-item">三、数据抽样</span></span></a></li><li><a class="level is-mobile" href="#四、图表的使用"><span class="level-left"><span class="level-item">4</span><span class="level-item">四、图表的使用</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1、如何选择合适的图表"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">1、如何选择合适的图表</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-展示比较"><span class="level-left"><span class="level-item">4.1.1</span><span class="level-item">1. 展示比较</span></span></a></li><li><a class="level is-mobile" href="#2-展示分布"><span class="level-left"><span class="level-item">4.1.2</span><span class="level-item">2. 展示分布</span></span></a></li><li><a class="level is-mobile" href="#3-展示构成"><span class="level-left"><span class="level-item">4.1.3</span><span class="level-item">3. 展示构成</span></span></a></li><li><a class="level is-mobile" href="#4-静态构成"><span class="level-left"><span class="level-item">4.1.4</span><span class="level-item">4. 静态构成</span></span></a></li></ul></li><li><a class="level is-mobile" href="#2、有效图表的几个基本要素"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">2、有效图表的几个基本要素</span></span></a></li><li><a class="level is-mobile" href="#3、增强图表表达力的几种方法"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">3、增强图表表达力的几种方法</span></span></a></li><li><a class="level is-mobile" href="#4、可视化图表的几个注意事项"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">4、可视化图表的几个注意事项</span></span></a></li><li><a class="level is-mobile" href="#5、选对图表"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">5、选对图表</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/tereseBlog/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5/"><span class="tag">实践</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/"><span class="tag">实践总结</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E7%AC%94%E8%AE%B0/"><span class="tag">笔记</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tereseBlog/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="tag">问题解决</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/tereseBlog/">Terese&#039;s site</a><p class="is-size-7"><span>&copy; 2022 terese</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/tereseBlog/js/column.js"></script><script src="/tereseBlog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/tereseBlog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/tereseBlog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/tereseBlog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/tereseBlog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
