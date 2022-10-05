@@ -33,3 +33,12 @@ Temporary Items
 
 # debug file
 _site
+node_modules
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
