@@ -5,8 +5,8 @@ keywords: null
 author: 'terese Song'
 language: zh-CN
 timezone: 'Asia/Shanghai'
-url: https://teresesong.github.io/tereseBlog
-root: /tereseBlog/
+url: https://teresesong.github.io/
+root: /
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
