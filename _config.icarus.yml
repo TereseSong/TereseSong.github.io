@@ -1,7 +1,7 @@
 version: 5.1.0
 variant: default
 logo: 
-    text: Terese's site
+    text: Terese's Blog
 head:
     favicon: /img/avatar.png
     manifest:
@@ -80,32 +80,38 @@ article:
 search:
     type: insight
     index_pages: true
-comment:
-    type: disqus
-    shortname: ''
-donates:
-    -
-        type: afdian
-        url: ''
-    -
-        type: alipay
-        qrcode: ''
-    -
-        type: buymeacoffee
-        url: ''
-    -
-        type: patreon
-        url: ''
-    -
-        type: paypal
-        business: ''
-        currency_code: USD
-    -
-        type: wechat
-        qrcode: ''
-share:
-    type: sharethis
-    install_url: ''
+# comment:
+#     type: disqus
+#     shortname: ''
+# Comments
+disqus:
+  enable: false
+  shortname: ''
+  count: true
+
+# donates:
+#     -
+#         type: afdian
+#         url: ''
+#     -
+#         type: alipay
+#         qrcode: ''
+#     -
+#         type: buymeacoffee
+#         url: ''
+#     -
+#         type: patreon
+#         url: ''
+#     -
+#         type: paypal
+#         business: ''
+#         currency_code: USD
+#     -
+#         type: wechat
+#         qrcode: ''
+# share:
+#     type: sharethis
+#     install_url: ''
 sidebar:
     left:
         sticky: false
